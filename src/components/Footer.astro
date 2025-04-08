@@ -1,0 +1,93 @@
+---
+import { LOGO_IMAGE, SITE } from "@config";
+
+const currentYear = new Date().getFullYear();
+
+export interface Props {
+  noMarginTop?: boolean;
+}
+---
+
+<footer class="mt-12">
+  <div class="footer-wrapper">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="/" class="whitespace-nowrap">
+          {
+            LOGO_IMAGE.enable ? (
+              <img
+                class="min-h-8 min-w-8 saturate-0"
+                src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
+                alt={SITE.title}
+                width={LOGO_IMAGE.width}
+                height={LOGO_IMAGE.height}
+              />
+            ) : (
+              SITE.title
+            )
+          }
+        </a>
+      </div>
+      <div class="footer-items">
+        <section>
+          <h3>ShortestPathLab</h3>
+          <p><a href="/">Home</a></p>
+          <p><a href="https://github.com/ShortestPathLab/">Github</a></p>
+        </section>
+        <section>
+          <h3>Monash Optimisation</h3>
+          <p>
+            <a href="https://www.monash.edu/it/dsai/optimisation">Home</a>
+          </p>
+        </section>
+        <section>
+          <h3>Monash University</h3>
+          <p><a href="https://www.monash.edu/">Home</a></p>
+        </section>
+      </div>
+    </div>
+    <div class="copyright-wrapper">
+      <span
+        >Copyright &#169; Monash University {currentYear}. All rights reserved.
+        Designed and built by Kevin Zheng.</span
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    @apply w-full px-4 text-sm;
+  }
+  .footer-logo {
+    @apply flex-1 pr-8;
+  }
+  .footer-wrapper {
+    @apply m-auto flex flex-col gap-8 border-t border-skin-fill/20 py-6 sm:flex-col sm:py-16;
+  }
+  .footer-content {
+    @apply flex;
+  }
+  .footer-items {
+    @apply grid flex-[4] grid-flow-row-dense gap-16;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  }
+  .footer-items section {
+    @apply ml-0 mr-0 flex flex-col gap-2 pr-0;
+  }
+  .footer-items section h3 {
+    @apply opacity-50;
+  }
+  .link-button {
+    @apply my-1 p-2 hover:rotate-6;
+  }
+  .link-button svg {
+    @apply scale-125;
+  }
+  .copyright-wrapper {
+    @apply my-4 flex flex-col pt-16 text-sm opacity-50 sm:flex-row;
+  }
+  .separator {
+    @apply hidden sm:inline;
+  }
+</style>

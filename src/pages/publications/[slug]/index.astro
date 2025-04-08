@@ -1,0 +1,27 @@
+---
+import { getPublications } from "@content/getPublications";
+import Publications from "@layouts/Publications.astro";
+import getPageNumbers from "@utils/getPageNumbers";
+import getPagination from "@utils/getPagination";
+
+export interface Props {}
+
+const posts = await getPublications();
+
+export async function getStaticPaths() {
+  const posts = await getPublications();
+  const pagePaths = getPageNumbers(posts.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+  return pagePaths;
+}
+
+const { slug } = Astro.params;
+
+const pagination = getPagination({
+  posts: posts,
+  page: slug,
+});
+---
+
+<Publications {...pagination} />

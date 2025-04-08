@@ -1,0 +1,25 @@
+---
+import { CardPublication } from "./PublicationCard";
+import { getPublications } from "@content/getPublications";
+import { find } from "lodash-es";
+
+export interface Props {
+  source?: string;
+  variant?: "block" | "citation";
+}
+
+const { source, variant = "citation" } = Astro.props;
+const publications = await getPublications();
+const p = find(publications, { id: source });
+---
+
+{
+  {
+    block: (
+      <div class="not-prose">
+        <CardPublication client:load pub={p} />
+      </div>
+    ),
+    citation: p?.citation,
+  }[variant]
+}

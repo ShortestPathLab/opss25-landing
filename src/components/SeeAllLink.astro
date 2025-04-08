@@ -1,0 +1,32 @@
+---
+export interface Props {
+  href?: string;
+  primary?: string;
+}
+
+const { href, primary } = Astro.props;
+---
+
+<div class="my-12">
+  <a href={href}>
+    {primary}
+    <span class="material-symbols-outlined translate-y-1.5 scale-90"
+      >arrow_forward</span
+    >
+  </a>
+</div>
+<style>
+  div > a {
+    @apply text-skin-accent;
+  }
+  a svg {
+    @apply translate-y-[-1px] fill-skin-accent;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+</style>

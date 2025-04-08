@@ -1,0 +1,31 @@
+---
+import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "./Layout.astro";
+import { slugifyStr } from "@utils/slugify";
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+  <Header slot="header" activeNav={slugifyStr(frontmatter.title)} />
+
+  <main id="main-content" class="mt-4 flex-1">
+    <section id="about" class="prose mb-28 max-w-5xl prose-img:border-0">
+      <h1 class="enter text-2xl font-normal sm:text-3xl">
+        {frontmatter.title}
+      </h1>
+      <slot />
+    </section>
+  </main>
+  <Footer />
+</Layout>

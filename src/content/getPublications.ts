@@ -1,4 +1,4 @@
-import { chain, entries, once, parseInt, values } from "lodash-es";
+import { chain, once, values } from "lodash-es";
 ///@ts-ignore
 import { Cite, plugins } from "@citation-js/core";
 import "@citation-js/plugin-bibtex";

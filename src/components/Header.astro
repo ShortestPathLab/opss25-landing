@@ -34,7 +34,7 @@ const { activeNav } = Astro.props;
           aria-expanded="false"
           aria-controls="menu-items"
         >
-          keyboard_arrow_down
+          top_panel_open
         </button>
         <div id="menu-items-wrapper">
           <ul id="menu-items" class="overflow-hidden">
@@ -64,10 +64,10 @@ const { activeNav } = Astro.props;
                     aria-live="polite"
                   >
                     <span class="material-symbols-outlined" id="moon-svg">
-                      contrast
+                      tonality
                     </span>
                     <span class="material-symbols-outlined" id="sun-svg">
-                      contrast
+                      tonality
                     </span>
                   </button>
                 </li>
@@ -91,13 +91,13 @@ const { activeNav } = Astro.props;
     @apply md:p-12 relative mb-2 w-full flex-col items-start justify-between p-4;
   }
   .logo {
-    @apply md:static md:mb-8 absolute block py-1 text-lg font-normal;
+    @apply md:static md:mb-8 absolute block py-1 text-lg;
   }
   .hamburger-menu {
     @apply md:hidden self-end py-2 transition-transform;
   }
   .hamburger-menu.open {
-    @apply rotate-180;
+    /* @apply rotate-180; */
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
@@ -177,6 +177,7 @@ const { activeNav } = Astro.props;
         menuExpanded ? "Open Menu" : "Close Menu"
       );
       menuBtn.classList.toggle("open");
+      menuBtn.innerHTML = menuExpanded ? "top_panel_open" : "top_panel_close";
       menuItemsWrapper?.classList.toggle("open");
     });
   }

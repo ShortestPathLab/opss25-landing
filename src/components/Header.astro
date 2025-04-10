@@ -13,11 +13,14 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo mt-0.5 font-medium text-skin-base sm:mt-0">
+      <a
+        href=`/${import.meta.env.BASE_URL}`
+        class="logo mt-0.5 font-medium text-skin-base sm:mt-0"
+      >
         {
           LOGO_IMAGE.enable ? (
             <img
-              src={`/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
+              src={`/${import.meta.env.BASE_URL}/assets/${LOGO_IMAGE.svg ? "logo.svg" : "logo.png"}`}
               alt={SITE.title}
               width={LOGO_IMAGE.width}
               height={LOGO_IMAGE.height}
@@ -39,13 +42,18 @@ const { activeNav } = Astro.props;
         <div id="menu-items-wrapper">
           <ul id="menu-items" class="overflow-hidden">
             <li>
-              <a href="/" class={!activeNav && "active"}> Home </a>
+              <a
+                href=`/${import.meta.env.BASE_URL}`
+                class={!activeNav && "active"}
+              >
+                Home
+              </a>
             </li>
             {
               ["Info", "Schedule", "Featured speakers", "Contact"].map(link => (
                 <li>
                   <a
-                    href={slugifyStr(link)}
+                    href={`/${import.meta.env.BASE_URL}/${slugifyStr(link)}`}
                     class={activeNav === slugifyStr(link) ? "active" : ""}
                   >
                     {link}
@@ -85,16 +93,16 @@ const { activeNav } = Astro.props;
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
   .nav-container {
-    @apply md:flex-row mx-0 flex flex-col items-center justify-between;
+    @apply mx-0 flex flex-col items-center justify-between md:flex-row;
   }
   .top-nav-wrap {
-    @apply md:p-12 relative mb-2 w-full flex-col items-start justify-between p-4;
+    @apply relative mb-2 w-full flex-col items-start justify-between p-4 md:p-12;
   }
   .logo {
-    @apply md:static md:mb-8 absolute block py-1 text-lg;
+    @apply absolute block py-1 text-lg md:static md:mb-8;
   }
   .hamburger-menu {
-    @apply md:hidden self-end py-2 transition-transform;
+    @apply self-end py-2 transition-transform md:hidden;
   }
   .hamburger-menu.open {
     /* @apply rotate-180; */
@@ -104,16 +112,16 @@ const { activeNav } = Astro.props;
   }
 
   nav {
-    @apply md:justify-start md:space-x-4 md:py-0 flex w-full flex-col items-start;
+    @apply flex w-full flex-col items-start md:justify-start md:space-x-4 md:py-0;
   }
   nav ul {
-    @apply md:ml-0 md:mt-0 md:w-auto md:gap-x-5 md:gap-y-0 mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2;
+    @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 md:ml-0 md:mt-0 md:w-auto md:gap-x-5 md:gap-y-0;
   }
   nav ul li {
-    @apply md:items-start md:justify-start md:py-1 col-span-2 flex items-end justify-start overflow-hidden;
+    @apply col-span-2 flex items-end justify-start overflow-hidden md:items-start md:justify-start md:py-1;
   }
   nav ul li a {
-    @apply md:my-0 md:py-1 md:text-left w-full px-0 py-1 text-left font-normal text-skin-base/80 hover:text-skin-accent sm:text-sm;
+    @apply w-full px-0 py-1 text-left font-normal text-skin-base/80 hover:text-skin-accent sm:text-sm md:my-0 md:py-1 md:text-left;
   }
   nav ul li:nth-last-child(2) a {
     @apply w-auto;
@@ -132,10 +140,10 @@ const { activeNav } = Astro.props;
     @apply h-4 w-4 fill-skin-base hover:fill-skin-accent;
   }
   #theme-btn {
-    @apply md:p-1 md:fixed md:bottom-0 md:left-0 md:m-10 p-0 pt-2 text-skin-base/80;
+    @apply p-0 pt-2 text-skin-base/80 md:fixed md:bottom-0 md:left-0 md:m-10 md:p-1;
   }
   #theme-btn svg {
-    @apply md:scale-100 scale-125 text-sm hover:rotate-12;
+    @apply scale-125 text-sm hover:rotate-12 md:scale-100;
   }
 
   .menu-icon line {
@@ -151,13 +159,13 @@ const { activeNav } = Astro.props;
     @apply opacity-5;
   }
   #menu-items-wrapper {
-    @apply md:mb-0 md:grid-rows-[1fr] md:justify-start mx-0 -mb-10 grid w-full grid-rows-[0fr] justify-stretch opacity-0 transition-["grid-template-rows,opacity"] duration-500 ease-out sm:opacity-100;
+    @apply mx-0 -mb-10 grid w-full grid-rows-[0fr] justify-stretch opacity-0 transition-["grid-template-rows,opacity"] duration-500 ease-out sm:opacity-100 md:mb-0 md:grid-rows-[1fr] md:justify-start;
   }
   #menu-items-wrapper.open {
-    @apply after:md:border-0 md:after:content-none mb-0 grid-rows-[1fr] opacity-100 after:mt-8 after:border-b after:border-current after:opacity-20 after:content-[''];
+    @apply mb-0 grid-rows-[1fr] opacity-100 after:mt-8 after:border-b after:border-current after:opacity-20 after:content-[''] after:md:border-0 md:after:content-none;
   }
   #menu-items {
-    @apply md:w-fit w-full;
+    @apply w-full md:w-fit;
   }
 </style>
 

@@ -40,8 +40,32 @@ export function CardBase({
           <h3 {...headerProps}>{primary}</h3>
         )}
       </a>
-      {secondary}
-      <div>{description}</div>
+      <p className="text-sm">{secondary}</p>
+      <div className="mt-2">{description}</div>
+    </li>
+  );
+}
+export function ProgramEventCard({
+  primary,
+  description,
+  image,
+}: {
+  image?: string;
+  primary?: string;
+  description?: ReactNode;
+}) {
+  return (
+    <li className="animate-fadeIn my-3 flex-1 list-none">
+      {image && (
+        <div
+          className="mb-2 h-32 w-full rounded-md bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        />
+      )}
+      <h2 className={`mb-1 inline-block font-normal`}>{primary}</h2>
+      <div className="text-sm opacity-80">{description}</div>
     </li>
   );
 }
@@ -53,7 +77,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       href={href}
       secHeading={secHeading}
       primary={title}
-      description={<p className="mt-2">{description}</p>}
+      description={description}
       secondary={
         <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
       }

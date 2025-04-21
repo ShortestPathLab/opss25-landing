@@ -1,0 +1,58 @@
+---
+import { ProgramEventCard } from "@components/Card";
+import { getCollection } from "astro:content";
+import { format, parse } from "date-fns";
+
+const programs = await getCollection("program");
+---
+
+<div>
+  {
+    programs.map(p => (
+      <>
+        {p.data.map(p1 => (
+          <>
+            <h2 class="animate-fadeIn text-xl">
+              {format(parse(p1.date, "yyyy-MM-dd", new Date()), "do MMMM yyyy")}
+            </h2>
+            <div class="my-3">
+              {p1.events.map(p2 => (
+                <div class="flex gap-2">
+                  <code class="animate-fadeIn my-3 w-16 flex-shrink-0 font-mono text-sm">
+                    {p2.time}
+                  </code>
+                  <ProgramEventCard
+                    image={p2.image}
+                    primary={p2.name}
+                    description={p2.description}
+                  />
+                </div>
+              ))}
+            </div>
+          </>
+        ))}
+      </>
+    ))
+  }
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("enter-fade");
+          entry.target.classList.remove("invisible");
+        } else {
+          entry.target.classList.add("invisible");
+          entry.target.classList.remove("enter-fade");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".animate-fadeIn");
+    hiddenElements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script>

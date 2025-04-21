@@ -44,22 +44,24 @@ const { activeNav } = Astro.props;
             <li>
               <a
                 href=`${import.meta.env.BASE_URL}`
-                class={!activeNav && "active"}
+                class={!activeNav ? "active" : undefined}
               >
                 Home
               </a>
             </li>
             {
-              ["Info", "Schedule", "Featured speakers", "Contact"].map(link => (
-                <li>
-                  <a
-                    href={`${import.meta.env.BASE_URL}/${slugifyStr(link)}`}
-                    class={activeNav === slugifyStr(link) ? "active" : ""}
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))
+              ["Expression of interest", "Program", "Personel", "Contact"].map(
+                link => (
+                  <li>
+                    <a
+                      href={`${import.meta.env.BASE_URL}/${slugifyStr(link)}`}
+                      class={activeNav === slugifyStr(link) ? "active" : ""}
+                    >
+                      {link}
+                    </a>
+                  </li>
+                )
+              )
             }
             {
               SITE.lightAndDarkMode && (

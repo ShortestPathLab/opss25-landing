@@ -5,7 +5,7 @@ export const SITE: Site = {
   baseUrl: "summer-school-2025",
   author: "Kevin Zheng",
   desc: "Summer school of optimisation and planning 2025.",
-  title: "SSAI 2025",
+  title: "APSS 2025",
   ogImage: "ssai-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 10,

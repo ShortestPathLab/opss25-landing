@@ -1,0 +1,84 @@
+- date: '2024-11-03'
+  events:
+  - time: 06:00-07:00
+    name: Arrivals
+    description: Participants arriving from Europe and USA
+  - time: 09:00
+    name: Bus Departure
+    description: 2-hour bus trip from Southern Cross (Charlotte)
+  - time: 10:00-11:00
+    name: Arrivals & Registration
+    description: Tea and coffee provided
+  - time: 13:00-14:00
+    name: Lunch
+    description: ''
+  - time: 14:00-17:00
+    name: Afternoon Session
+    description: Setup and Installation, Introductions, Schedule Overview, Get to Know Each Other Activity, Admin
+  - time: 17:00-onward
+    name: Practice & Socialising
+    description: Practice and getting to know each other; Competition starts and runs throughout the week
+- date: '2024-11-04'
+  events:
+  - time: 07:00-09:00
+    name: Breakfast
+    description: ''
+  - time: 09:00-10:30
+    name: Modelling with MiniZinc 
+    image: https://plus.unsplash.com/premium_photo-1679547202606-4d905471107f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    description: Learn from Guido how to model problems with MiniZinc, the generic constraint programming language.
+  - time: '10:30'
+    name: Morning Tea
+    description: ''
+  - time: 11:00-13:00
+    name: Session
+    description: ''
+  - time: 13:00-14:00
+    name: Lunch
+    description: ''
+  - time: 14:00-15:30
+    name: Lecture
+    description: More MiniZinc
+  - time: '15:30'
+    name: Afternoon Tea
+    description: ''
+  - time: 16:00-18:00
+    name: Hands-on
+    description: ''
+  - time: '19:00'
+    name: Dinner
+    description: ''
+  - time: 20:00-08:59
+    name: Mini MiniZinc Challenge
+    description: ''
+- date: '2024-11-05'
+  events:
+  - time: All day
+    name: Workshops & Challenges
+    description: >-
+      Option 1: RL and task motion planning with uncertainty (Sarah Keren); Option 2: Planning - Pacman challenge (Sebastian/Nir); Option 3: KR challenge (Jochen Renz - Angry Birds)
+  - time: Evening
+    name: Dinner at Venue
+    description: ''
+  - time: 20:00-08:59
+    name: Competition/Hackathon
+    description: ''
+- date: '2024-11-06'
+  events:
+  - time: All day
+    name: Workshops & Challenges
+    description: >-
+      Option 1: Robo Runners - uncertainty (Daniel); Option 2: Flatland
+  - time: 20:00-08:59
+    name: Competition/Hackathon
+    description: ''
+- date: '2024-11-07'
+  events:
+  - time: 10:00-14:00
+    name: Wrap-up and Awards
+    image: https://plus.unsplash.com/premium_photo-1664443577580-dd2674e9d359?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z3JhZGllbnR8ZW58MHx8MHx8fDA%3D
+    description: Presentation of competition results and awards. Winning students describe their approach
+  - time: '14:00'
+    name: Departure
+    description: Bus to Southern Cross
+

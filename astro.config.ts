@@ -17,6 +17,7 @@ export default defineConfig({
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     shikiConfig: { theme: "one-dark-pro", wrap: true },
   },
+  base: ".",
   vite: { optimizeDeps: { exclude: ["@resvg/resvg-js"] } },
   scopedStyleStrategy: "where",
 });

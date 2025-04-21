@@ -59,7 +59,8 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        mono: ["Geist", "sans-serif"],
+        sans: ["Geist", "sans-serif"],
+        mono: ["consolas", "sans-serif"],
       },
 
       typography: {

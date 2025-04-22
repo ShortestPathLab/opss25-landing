@@ -14,7 +14,7 @@ const tempLocationImage =
 
 <Layout>
   <Header slot="header" />
-  <main id="main-content">
+  <main id="main-content" class="overflow-hidden">
     <section class="enter mb-4 w-full">
       <div
         class="hero-image h-[860px] max-h-[50vh] w-full rounded-md bg-skin-inverted bg-cover bg-center sm:max-h-[60vh]"
@@ -63,15 +63,17 @@ const tempLocationImage =
                 },
                 { label: "When", value: "3-7th November 2025" },
               ].map(({ label, value, image }) => (
-                <div class="mb-2 rounded-md bg-skin-inverted/5 p-4">
+                <div class="mb-2 rounded-md bg-skin-inverted/5">
                   {image && (
                     <div
                       style={`background-image: url(${image})`}
-                      class="mb-4 h-32 w-full rounded-md bg-cover bg-center"
+                      class="h-48 w-full rounded-md bg-cover bg-center"
                     />
                   )}
-                  <h3 class="mb-1 text-sm font-medium">{label}</h3>
-                  <p class="text-sm">{value}</p>
+                  <div class="p-4">
+                    <h3 class="mb-1 text-sm font-medium">{label}</h3>
+                    <p class="text-sm">{value}</p>
+                  </div>
                 </div>
               ))
             }

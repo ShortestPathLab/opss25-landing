@@ -74,7 +74,7 @@ export function ParallaxImage({ image }: { image?: string }) {
   return (
     <div
       ref={ref}
-      className="mb-2 h-32 w-full rounded-md bg-cover bg-center"
+      className="h-32 w-full rounded-md bg-cover bg-center"
       style={{
         backgroundImage: `url(${image})`,
       }}

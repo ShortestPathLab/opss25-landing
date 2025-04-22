@@ -64,6 +64,9 @@ const programs = await getCollection("program");
         if (entry.isIntersecting) {
           entry.target.classList.add("enter");
           entry.target.classList.remove("invisible");
+        } else {
+          entry.target.classList.remove("enter");
+          entry.target.classList.add("invisible");
         }
       });
     });

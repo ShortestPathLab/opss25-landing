@@ -13,10 +13,12 @@ const { image, primary, description, elevated } = Astro.props;
 
 <div class="animate-fadeIn min-w-[min(190px,100%)] flex-1">
   <li
-    class={`flex-1 h-full list-none ${elevated && "p-4 bg-skin-inverted/5 rounded-md"}`}
+    class={`flex-1 h-full list-none ${elevated && "bg-skin-inverted/5 rounded-md"}`}
   >
     {image && <ParallaxImage client:only="react" image={image} />}
-    <h2 class={`mb-1 inline-block font-normal leading-6`}>{primary}</h2>
-    <div class="text-sm opacity-80">{description}</div>
+    <div class=`${elevated ? "p-4":"pt-4"}`>
+      <h2 class={`mb-1 inline-block font-normal leading-6`}>{primary}</h2>
+      <div class="text-sm opacity-80">{description}</div>
+    </div>
   </li>
 </div>

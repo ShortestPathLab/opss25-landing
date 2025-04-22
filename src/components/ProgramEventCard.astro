@@ -16,7 +16,7 @@ const { image, primary, description, elevated } = Astro.props;
     class={`flex-1 h-full list-none ${elevated && "bg-skin-inverted/5 rounded-md"}`}
   >
     {image && <ParallaxImage client:only="react" image={image} />}
-    <div class=`${elevated ? "p-4":"pt-4"}`>
+    <div class=`${elevated ? "p-4" : image ? "pt-4" : ""}`>
       <h2 class={`mb-1 inline-block font-normal leading-6`}>{primary}</h2>
       <div class="text-sm opacity-80">{description}</div>
     </div>

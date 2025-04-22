@@ -20,6 +20,7 @@ export default {
     screens: {
       sm: "860px",
       md: "920px",
+      lg: "1400px",
     },
 
     extend: {
@@ -29,6 +30,12 @@ export default {
           accent: withOpacity("--color-accent"),
           inverted: withOpacity("--color-fill"),
         },
+      },
+      textDecorationColor: {
+        skin:{
+          accent: withOpacity("--color-accent"),
+          base: withOpacity("--color-text-base"),
+        }
       },
       backgroundColor: {
         skin: {
@@ -60,7 +67,7 @@ export default {
       },
       fontFamily: {
         sans: ["Geist", "sans-serif"],
-        mono: ["consolas", "sans-serif"],
+        mono: ["Geist Mono", "consolas", "monospace"],
       },
 
       typography: {
@@ -77,7 +84,7 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"),require("taos/plugin")],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/container-queries"), require("taos/plugin")],
   safelist: [
     '!duration-[0ms]',
     '!delay-[0ms]',

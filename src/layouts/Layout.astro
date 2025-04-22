@@ -47,6 +47,7 @@ const socialImageURL = new URL(
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&icon_names=chevron_backward,chevron_forward,tonality,top_panel_close,top_panel_open"
     />
+
     <meta name="generator" content={Astro.generator} />
 
     <!-- General Meta Tags -->
@@ -94,6 +95,10 @@ const socialImageURL = new URL(
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <meta name="theme-color" content="" />
 
@@ -120,14 +125,14 @@ const socialImageURL = new URL(
     </script>
   </head>
   <body>
-    <div class="md:gap-8 md:flex-row flex min-h-dvh flex-col gap-4">
+    <div class="flex min-h-dvh flex-col gap-4 md:flex-row md:gap-8">
       <div
-        class="md:sticky md:top-0 md:h-fit md:max-w-[240px] md:w-[240px] md:overflow-hidden"
+        class="md:sticky md:top-0 md:h-fit md:w-[240px] md:max-w-[240px] md:overflow-hidden"
       >
         <slot name="header" />
       </div>
       <div
-        class="md:p-12 flex max-w-7xl flex-1 flex-col overflow-hidden"
+        class="flex max-w-7xl flex-1 flex-col md:p-12"
         style="
       margin-left: max(0px, calc(calc(calc(100dvw / 2) - 240px) - 640px))"
       >

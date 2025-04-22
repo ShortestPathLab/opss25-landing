@@ -15,7 +15,7 @@ const { activeNav } = Astro.props;
     <div class="top-nav-wrap">
       <a
         href=`${import.meta.env.BASE_URL}`
-        class="logo mt-0.5 font-medium text-skin-base sm:mt-0"
+        class="logo mt-0.5 font-semibold text-skin-base sm:mt-0"
       >
         {
           LOGO_IMAGE.enable ? (
@@ -50,18 +50,16 @@ const { activeNav } = Astro.props;
               </a>
             </li>
             {
-              ["Expression of interest", "Program", "Personel", "Contact"].map(
-                link => (
-                  <li>
-                    <a
-                      href={`${import.meta.env.BASE_URL}/${slugifyStr(link)}`}
-                      class={activeNav === slugifyStr(link) ? "active" : ""}
-                    >
-                      {link}
-                    </a>
-                  </li>
-                )
-              )
+              ["Program", "Personel", "Contact"].map(link => (
+                <li>
+                  <a
+                    href={`${import.meta.env.BASE_URL}/${slugifyStr(link)}`}
+                    class={activeNav === slugifyStr(link) ? "active" : ""}
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))
             }
             {
               SITE.lightAndDarkMode && (

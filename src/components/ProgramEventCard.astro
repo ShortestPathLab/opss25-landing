@@ -1,0 +1,22 @@
+---
+import { ParallaxImage } from "./Card";
+
+export interface Props {
+  image?: string;
+  primary?: string;
+  description?: string;
+  elevated?: boolean;
+}
+
+const { image, primary, description, elevated } = Astro.props;
+---
+
+<div class="animate-fadeIn min-w-[min(190px,100%)] flex-1">
+  <li
+    class={`flex-1 h-full list-none ${elevated && "p-4 bg-skin-inverted/5 rounded-md"}`}
+  >
+    {image && <ParallaxImage client:only="react" image={image} />}
+    <h2 class={`mb-1 inline-block font-normal leading-6`}>{primary}</h2>
+    <div class="text-sm opacity-80">{description}</div>
+  </li>
+</div>

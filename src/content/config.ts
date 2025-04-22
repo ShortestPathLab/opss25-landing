@@ -42,10 +42,17 @@ const program = defineCollection({
       date: z.string(),
       events: z.array(
         z.object({
-          image: z.string().optional(),
           time: z.string(),
-          name: z.string(),
-          description: z.string(),
+          name: z.string().optional(),
+          description: z.string().optional(),
+          events: z.array(
+            z.object({
+              elevated: z.boolean().default(false),
+              image: z.string().optional(),
+              name: z.string(),
+              description: z.string(),
+            })
+          ),
         })
       ),
     })

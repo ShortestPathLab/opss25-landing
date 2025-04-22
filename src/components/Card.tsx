@@ -1,7 +1,9 @@
 import { slugifyStr } from "@utils/slugify";
-import Datetime from "./Datetime";
 import type { CollectionEntry } from "astro:content";
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
+import * as use from "react-use";
+import Datetime from "./Datetime";
+const { useScroll } = use;
 
 export interface Props {
   href?: string;
@@ -13,7 +15,6 @@ export function CardBase({
   primary,
   secondary,
   description,
-  secHeading,
   href,
   slug,
 }: {
@@ -45,30 +46,42 @@ export function CardBase({
     </li>
   );
 }
-export function ProgramEventCard({
-  primary,
-  description,
-  image,
-}: {
-  image?: string;
-  primary?: string;
-  description?: ReactNode;
-}) {
+
+export function ParallaxImage({ image }: { image?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
+
+    document.addEventListener(
+      "scroll",
+      () => {
+        if (ref.current) {
+          const { top, height } = ref.current.getBoundingClientRect();
+          const y = top + height / 2 - window.innerHeight / 2;
+
+          ref.current.style.backgroundPositionY = `calc(50% + ${y * -0.1}px)`;
+        }
+      },
+      { signal }
+    );
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
   return (
-    <li className="animate-fadeIn my-3 flex-1 list-none">
-      {image && (
-        <div
-          className="mb-2 h-32 w-full rounded-md bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${image})`,
-          }}
-        />
-      )}
-      <h2 className={`mb-1 inline-block font-normal`}>{primary}</h2>
-      <div className="text-sm opacity-80">{description}</div>
-    </li>
+    <div
+      ref={ref}
+      className="mb-2 h-32 w-full rounded-md bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
+    />
   );
 }
+
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
   const { title, pubDatetime, modDatetime, description } = frontmatter;
 

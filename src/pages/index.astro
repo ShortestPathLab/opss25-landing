@@ -3,17 +3,21 @@ import Footer from "@components/Footer.astro";
 import Grid from "@components/Grid.astro";
 import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
+import Copy from "@pages/__copy__.mdx";
 
 const tempHeroImage =
-  "https://images.homhero.com.au/1280x0/3ff76bd1-0614-4e45-947c-2d065ceaff2b/listing/456/6903f797-2be9-d7b5-f022-f8bc5752166d.jpg";
+  "https://images.unsplash.com/photo-1688909906484-738d78601884?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+const tempLocationImage =
+  "https://upload.wikimedia.org/wikipedia/commons/c/c3/1_san_remo_victoria_aerial_pano_2021.jpg";
 ---
 
 <Layout>
   <Header slot="header" />
   <main id="main-content">
-    <section class="enter-fade mb-4 hidden w-full">
+    <section class="enter mb-4 w-full">
       <div
-        class="h-[380px] max-h-[50vh] w-full rounded-md bg-skin-inverted bg-cover bg-center"
+        class="hero-image h-[860px] max-h-[50vh] w-full rounded-md bg-skin-inverted bg-cover bg-center sm:max-h-[60vh]"
         style=`background-image: url(${tempHeroImage})`
       >
       </div>
@@ -23,54 +27,73 @@ const tempHeroImage =
       <div class="flex flex-col items-start justify-between gap-4 md:flex-row">
         <div>
           <h1 class="enter">
-            The Australian planning and optimisation summer school
+            Australian planning and optimisation summer school <span
+              class="text-skin-accent">2025</span
+            >
           </h1>
           <p class="enter animation-delay-[300ms]" id="tagline">
-            We welcome you to the 13th Summer School for Planning and
-            Optimisation. This year, we will be hosting this event in San Remo
-            Bay, Melbourne.
+            San Remo Bay, Melbourne, Australia
           </p>
         </div>
-        <button
-          class="fade min-w-max rounded-md bg-skin-inverted/10 px-4 py-2 text-sm text-skin-base transition-opacity hover:opacity-50"
-          >Submit an expression of interest</button
-        >
+      </div>
+    </section>
+    <section>
+      <div
+        class="my-12 border-b-[1px] border-t-[1px] border-skin-fill/20 py-16 @container"
+      >
+        <h2 class="mb-4 text-xl">
+          Learn cutting-edge planning and optimisation
+        </h2>
+        <div class="flex flex-col gap-8 @2xl:flex-row">
+          <div class="flex-1">
+            <div class="prose mb-8 w-full leading-6"><Copy /></div>
+            <button
+              class="min-w-max rounded-md bg-skin-accent px-4 py-2 text-sm text-skin-inverted text-white transition-opacity hover:opacity-50"
+              >Submit an expression of interest</button
+            >
+          </div>
+          <div class="flex-0 @2xl:w-max">
+            {
+              [
+                {
+                  label: "Where",
+                  image: tempLocationImage,
+                  value:
+                    "Silverwater Resort, San Remo Bay, Melbourne, Australia",
+                },
+                { label: "When", value: "3-7th November 2025" },
+              ].map(({ label, value, image }) => (
+                <div class="mb-2 rounded-md bg-skin-inverted/5 p-4">
+                  {image && (
+                    <div
+                      style={`background-image: url(${image})`}
+                      class="mb-4 h-32 w-full rounded-md bg-cover bg-center"
+                    />
+                  )}
+                  <h3 class="mb-1 text-sm font-medium">{label}</h3>
+                  <p class="text-sm">{value}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </div>
     </section>
     <section id="featured" class="mb-24 mt-24">
-      <h1 class="mb-4 text-xl">Featured talks</h1>
+      <h1 class="mb-8 text-xl">On this site</h1>
       <Grid class="gap-2">
         {
-          Array.from({ length: 5 })
+          Array.from({ length: 3 })
             .map((_, i) => ({
-              title: [
-                "Multi-Agent Path Finding",
-                "Planning for Robotics",
-                "Optimisation Methods for Real-World Problems",
-                "Deep Learning for AI Planning",
-                "Game Theory and Mechanism Design for AI",
-              ][i % 5],
+              title: ["Program", "Personel", "Contact"][i % 3],
               description: [
-                "In this talk, we will discuss the challenges and opportunities of using AI for multi-agent pathfinding.",
-                "This talk will cover the basics of planning for robotics and introduce some of the latest research in the field.",
-                "This talk will cover some of the most recent advances in optimisation methods for real-world problems, including AI and machine learning applications.",
-                "Deep learning has been a major area of research in AI planning and optimisation in recent years. This talk will cover some of the latest results in this area.",
-                "Game theory and mechanism design are increasingly important areas of research in AI planning and optimisation. This talk will cover some of the latest results in this area.",
-              ][i % 5],
-              image: [
-                `https://plus.unsplash.com/premium_photo-1664443577580-dd2674e9d359?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z3JhZGllbnR8ZW58MHx8MHx8fDA%3D`,
-                `https://images.unsplash.com/photo-1635776062360-af423602aff3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3JhZGllbnR8ZW58MHx8MHx8fDA%3D`,
-                `https://images.unsplash.com/photo-1628388562727-05f0aa6800e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQwfHx8ZW58MHx8fHx8`,
-                `https://images.unsplash.com/photo-1644426358808-d5db8b4735a0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8`,
-                `https://images.unsplash.com/photo-1613901284938-8e136d09275f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDk1fHx8ZW58MHx8fHx8`,
-              ][i % 5],
+                "View program schedule.",
+                "See our organisers and featured speakers.",
+                "Etc etc.",
+              ][i % 3],
             }))
-            .map(({ title, description, image }) => (
-              <div class="mb-4 flex cursor-pointer flex-col gap-2 transition-opacity hover:opacity-50">
-                <div
-                  class="mb-2 h-64 w-full rounded-md bg-skin-inverted bg-cover bg-center"
-                  style={`background-image: url(${image})`}
-                />
+            .map(({ title, description }) => (
+              <div class="mb-4 flex cursor-pointer flex-col gap-2 rounded-md bg-skin-inverted/5 p-4 transition-opacity hover:opacity-50">
                 <h2 class="pr-4">{title}</h2>
                 <p class="pr-4 text-sm"> {description}</p>
               </div>
@@ -84,11 +107,15 @@ const tempHeroImage =
 </Layout>
 
 <style>
+  html[data-theme="light"] .hero-image {
+    @apply invert;
+  }
+
   #hero {
-    @apply mt-12 sm:mt-0;
+    @apply mt-12 sm:mt-16;
   }
   #hero h1 {
-    @apply inline-block text-2xl font-normal sm:text-2xl;
+    @apply inline-block text-4xl font-medium tracking-tight sm:text-6xl sm:leading-none;
   }
   #hero .rss-link {
     @apply mb-6;
@@ -100,7 +127,7 @@ const tempHeroImage =
     @apply max-w-xl text-sm font-normal opacity-70;
   }
   #hero #tagline {
-    @apply mb-2 max-w-xl text-sm font-normal;
+    @apply mb-2 mt-2 max-w-xl font-normal sm:mt-6;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */

@@ -102,7 +102,7 @@ const { activeNav } = Astro.props;
     @apply absolute block py-1 text-lg md:static md:mb-8;
   }
   .hamburger-menu {
-    @apply self-end py-2 transition-transform md:hidden;
+    @apply self-end py-2 text-skin-base transition-transform md:hidden;
   }
   .hamburger-menu.open {
     /* @apply rotate-180; */
@@ -147,7 +147,7 @@ const { activeNav } = Astro.props;
   }
 
   .menu-icon line {
-    @apply opacity-10 transition-opacity duration-75 ease-in-out;
+    @apply opacity-10 transition-opacity duration-75 ease-[cubic-bezier(0.22,1,0.36,1)];
   }
   .menu-icon .close {
     opacity: 0;
@@ -159,11 +159,16 @@ const { activeNav } = Astro.props;
     @apply opacity-5;
   }
   #menu-items-wrapper {
-    @apply mx-0 -mb-10 grid w-full grid-rows-[0fr] justify-stretch opacity-0 transition-["grid-template-rows,opacity"] duration-500 ease-out sm:opacity-100 md:mb-0 md:grid-rows-[1fr] md:justify-start;
+    @apply mx-0 -mb-10 grid w-full grid-rows-[0fr] justify-stretch opacity-0 transition-["grid-template-rows,opacity"] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:opacity-100 md:mb-0 md:grid-rows-[1fr] md:justify-start;
   }
   #menu-items-wrapper.open {
-    @apply mb-0 grid-rows-[1fr] opacity-100 after:mt-8 after:border-b after:border-current after:opacity-20 after:content-[''] after:md:border-0 md:after:content-none;
+    @apply mb-0 grid-rows-[1fr] opacity-100 after:mt-4 after:content-[''] after:md:border-0 md:after:content-none;
   }
+
+  #menu-items-wrapper.open {
+    animation: enter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
   #menu-items {
     @apply w-full md:w-fit;
   }

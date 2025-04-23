@@ -38,9 +38,5 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
     minute: "2-digit",
   });
 
-  return (
-    <>
-      <time dateTime={myDatetime.toISOString()}>{`${date}, ${time}`}</time>
-    </>
-  );
+  return <time dateTime={myDatetime.toISOString()}>{`${date}, ${time}`}</time>;
 };

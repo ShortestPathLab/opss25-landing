@@ -12,38 +12,33 @@ const programs = await getCollection("program");
     programs.map(ps => (
       <>
         {ps.data.map(p => (
-          <div class="sm:flex sm:gap-8">
-            <h2 class="text-xl sm:sticky sm:top-12 sm:h-fit">
+          <div class="mb-4 sm:flex sm:gap-8">
+            <h4 class="mb-2 text-xl sm:sticky sm:top-12 sm:my-2 sm:h-fit">
               {format(parse(p.date, "yyyy-MM-dd", new Date()), "do MMM")}
-            </h2>
-            <div class="my-3 flex-1 sm:-mt-1">
+            </h4>
+            <div class="my-1 flex-1">
               {p.events.map(es => (
                 <div class="flex gap-2">
-                  <code class="my-3 w-16 flex-shrink-0 font-mono text-sm">
+                  <code class="mt-2 w-20 flex-shrink-0 font-mono text-sm">
                     {es.time}
                   </code>
                   <div class="flex-1">
                     {!!(es.name || es.description) && (
                       <div class="my-2">
                         <ProgramEventCard
-                          primary={es.name}
+                          name={es.name}
                           description={es.description}
                         />
                       </div>
                     )}
                     <Grid
-                      class="my-2 gap-2"
+                      class="my-1 gap-2"
                       width={
                         es.events.length > 1 ? 280 : Number.MAX_SAFE_INTEGER
                       }
                     >
                       {es.events.map(e => (
-                        <ProgramEventCard
-                          elevated={e.elevated}
-                          image={e.image}
-                          primary={e.name}
-                          description={e.description}
-                        />
+                        <ProgramEventCard {...e} />
                       ))}
                     </Grid>
                   </div>

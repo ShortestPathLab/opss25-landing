@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type A = Partial<CollectionEntry<"team">["data"]>;
+
+export interface Props extends A {}
+
+const { image, title, description } = Astro.props;
+---
+
+<div class="animate-fadeIn min-w-[min(190px,100%)] flex-1">
+  <li
+    class={`flex-1 flex gap-4 p-4 h-full list-none bg-skin-inverted/5 rounded-md`}
+  >
+    <div
+      class="rounded-full bg-skin-inverted bg-cover bg-center"
+      style={{
+        width: "36px",
+        height: "36px",
+        backgroundImage: `url(${image})`,
+      }}
+    >
+    </div>
+    <div class=`flex flex-1 flex-col`>
+      <h4 class={`mb-1 inline-block font-normal leading-6`}>{title}</h4>
+      <div class="text-sm opacity-80">{description}</div>
+    </div>
+  </li>
+</div>

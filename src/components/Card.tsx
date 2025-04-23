@@ -1,13 +1,10 @@
 import { slugifyStr } from "@utils/slugify";
-import type { CollectionEntry } from "astro:content";
 import { useEffect, useRef, type ReactNode } from "react";
-import * as use from "react-use";
 import Datetime from "./Datetime";
-const { useScroll } = use;
 
 export interface Props {
   href?: string;
-  frontmatter: CollectionEntry<"blog">["data"];
+  frontmatter: any;
   secHeading?: boolean;
 }
 

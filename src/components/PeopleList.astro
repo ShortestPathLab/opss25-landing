@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import PersonCard from "./PersonCard.astro";
+import Grid from "./Grid.astro";
+import { entries, groupBy } from "lodash-es";
+
+const members = await getCollection("team");
+const groups = groupBy(members, "data.tag");
+---
+
+{
+  entries(groups).map(([g, members]) => (
+    <>
+      <h3>{g}</h3>
+      <Grid class="not-prose gap-2" width={420}>
+        {members.map(member => (
+          <PersonCard {...member.data} />
+        ))}
+      </Grid>
+    </>
+  ))
+}

@@ -4,6 +4,7 @@ import Grid from "@components/Grid.astro";
 import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
 import Copy from "@pages/__copy__.mdx";
+import { slugifyStr } from "@utils/slugify";
 
 const tempHeroImage =
   "https://images.unsplash.com/photo-1688909906484-738d78601884?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -38,17 +39,20 @@ const tempLocationImage =
       </div>
     </section>
     <section>
-      <div class="my-12 py-16 @container">
-        <h2 class="mb-4 text-xl">
-          Learn cutting-edge planning and optimisation
+      <div class="my-12 mb-6 py-16 @container">
+        <h2 class="mb-8 max-w-xl text-3xl tracking-tight sm:mb-12 sm:text-4xl">
+          Learn cutting-edge planning and optimisation.
         </h2>
-        <div class="flex flex-col gap-8 @2xl:flex-row">
+        <div class="flex flex-col-reverse gap-8 @2xl:flex-row">
           <div class="flex-1">
-            <div class="prose mb-8 w-full leading-6"><Copy /></div>
-            <button
-              class="min-w-max rounded-md bg-skin-accent px-4 py-2 text-sm text-skin-inverted text-white transition-opacity hover:opacity-50"
-              >Submit an expression of interest</button
-            >
+            <div class="prose mb-8 w-full leading-6">
+              <Copy>
+                <button
+                  class="mb-6 min-w-max rounded-md bg-skin-accent px-4 py-2 text-sm text-skin-inverted text-white transition-opacity hover:opacity-50"
+                  >Submit an expression of interest</button
+                >
+              </Copy>
+            </div>
           </div>
           <div class="flex-0 @2xl:w-max">
             {
@@ -79,8 +83,8 @@ const tempLocationImage =
         </div>
       </div>
     </section>
-    <section id="featured" class="mb-12 mt-12">
-      <h1 class="mb-8 text-xl">On this site</h1>
+    <section class="mb-8">
+      <h1 class="mb-4 text-xl">On this site</h1>
       <Grid class="gap-2">
         {
           Array.from({ length: 3 })
@@ -93,10 +97,13 @@ const tempLocationImage =
               ][i % 3],
             }))
             .map(({ title, description }) => (
-              <div class="mb-4 flex cursor-pointer flex-col gap-2 rounded-md bg-skin-inverted/5 p-4 transition-opacity hover:opacity-50">
+              <a
+                href={`${import.meta.env.BASE_URL}/${slugifyStr(title)}`}
+                class="flex cursor-pointer flex-col gap-2 rounded-md bg-skin-inverted/5 p-4 transition-opacity hover:opacity-50"
+              >
                 <h2 class="pr-4">{title}</h2>
                 <p class="pr-4 text-sm"> {description}</p>
-              </div>
+              </a>
             ))
         }
       </Grid>
@@ -127,7 +134,7 @@ const tempLocationImage =
     @apply max-w-xl text-sm font-normal opacity-70;
   }
   #hero #tagline {
-    @apply mb-2 mt-2 max-w-xl font-normal sm:mt-6;
+    @apply mb-2 mt-2 max-w-xl tracking-tight sm:mt-6;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */

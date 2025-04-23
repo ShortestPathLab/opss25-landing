@@ -28,6 +28,7 @@ const program = defineCollection({
               elevated: z.boolean().default(false),
               presenters: z.array(z.string()).default([]),
               image: z.string().optional(),
+              imageOffset: z.string().optional(),
               name: z.string(),
               description: z.string(),
             })

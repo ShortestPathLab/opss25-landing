@@ -44,24 +44,29 @@ export function CardBase({
   );
 }
 
-export function ParallaxImage({ image }: { image?: string }) {
+export function ParallaxImage({
+  image,
+  offset = "50%",
+}: {
+  image?: string;
+  offset?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
 
-    document.addEventListener(
-      "scroll",
-      () => {
-        if (ref.current) {
-          const { top, height } = ref.current.getBoundingClientRect();
-          const y = top + height / 2 - window.innerHeight / 2;
+    const f = () => {
+      if (ref.current) {
+        const { top, height } = ref.current.getBoundingClientRect();
+        const y = top + height / 2 - window.innerHeight / 2;
 
-          ref.current.style.backgroundPositionY = `calc(50% + ${y * -0.1}px)`;
-        }
-      },
-      { signal }
-    );
+        ref.current.style.backgroundPositionY = `calc(${offset} + ${y * -0.1}px)`;
+      }
+    };
+    document.addEventListener("scroll", f, { signal });
+
+    f();
 
     return () => {
       controller.abort();

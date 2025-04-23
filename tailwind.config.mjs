@@ -66,7 +66,7 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        sans: ["Geist", "sans-serif"],
+        sans: ["Geist", "sans-serif", "Noto Color Emoji"],
         mono: ["Geist Mono", "consolas", "monospace"],
       },
 

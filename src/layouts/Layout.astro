@@ -41,7 +41,11 @@ const socialImageURL = new URL(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/square.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href=`${import.meta.env.BASE_URL}/assets/logo.svg`
+    />
     <link rel="canonical" href={canonicalURL} />
     <link
       rel="stylesheet"
@@ -129,7 +133,7 @@ const socialImageURL = new URL(
     </script>
   </head>
   <body>
-    <div class="flex min-h-dvh flex-col gap-4 md:flex-row md:gap-8">
+    <div class="flex min-h-dvh flex-col md:flex-row">
       <div
         class="md:sticky md:top-0 md:h-fit md:w-[180px] md:max-w-[180px] md:overflow-hidden"
       >

@@ -1,5 +1,5 @@
 import { slugifyStr } from "@utils/slugify";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ComponentProps, type ReactNode } from "react";
 import Datetime from "./Datetime";
 
 export interface Props {
@@ -47,10 +47,11 @@ export function CardBase({
 export function ParallaxImage({
   image,
   offset = "50%",
+  ...props
 }: {
   image?: string;
   offset?: string;
-}) {
+} & ComponentProps<"div">) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const controller = new AbortController();
@@ -76,11 +77,15 @@ export function ParallaxImage({
   return (
     <div
       ref={ref}
-      className="h-32 w-full rounded-md bg-cover bg-center"
+      {...props}
+      className={`h-32 w-full rounded-md bg-cover bg-center ${props.className}`}
       style={{
         backgroundImage: `url(${image})`,
+        ...props.style,
       }}
-    />
+    >
+      <slot />
+    </div>
   );
 }
 

@@ -7,50 +7,63 @@ import Copy from "@pages/__copy__.mdx";
 import { slugifyStr } from "@utils/slugify";
 
 const tempHeroImage =
-  "https://images.unsplash.com/photo-1688909906484-738d78601884?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  "https://www.silverwaterresort.com.au/hs-fs/hubfs/sunset-off-deck-main.jpg?width=1920&height=1280&name=sunset-off-deck-main.jpg";
 
-const tempLocationImage =
-  "https://upload.wikimedia.org/wikipedia/commons/c/c3/1_san_remo_victoria_aerial_pano_2021.jpg";
+const tempLocationImage = "./cover.webp";
 ---
 
 <Layout>
   <Header slot="header" />
-  <main id="main-content" class="overflow-hidden">
-    <section class="enter mb-4 w-full">
+  <main id="main-content" class="enter overflow-hidden">
+    <section>
       <div
-        class="hero-image h-[860px] max-h-[50vh] w-full rounded-md bg-skin-inverted bg-cover bg-center sm:max-h-[60vh]"
-        style=`background-image: url(${tempHeroImage})`
+        id="hero"
+        style=`background-image: linear-gradient(to bottom, #00000099, #24292e77), url(${tempLocationImage})`
       >
-      </div>
-    </section>
-    <section id="hero">
-      <!-- <p id="overline">ShortestPathLab @ Monash University</p> -->
-      <div class="flex flex-col items-start justify-between gap-4 md:flex-row">
-        <div>
-          <h1 class="enter">
-            Australian planning and optimisation summer school <span
-              class="text-skin-accent">2025</span
-            >
-          </h1>
-          <p class="enter animation-delay-[300ms]" id="tagline">
-            Learn how to unlock the potential of planning and optimisation on
-            3-7th November in Melbourne, Australia
-          </p>
+        <div
+          class="mb-24 flex w-full max-w-64 flex-col items-start gap-2 sm:max-w-max sm:flex-row sm:items-center sm:gap-4"
+        >
+          <img src=`${import.meta.env.BASE_URL}/logo-wide.svg` class="h-4" />
+          <span class="font-medium leading-tight text-white"
+            >Optimisation and planning summer school 2025</span
+          >
         </div>
+        <div class="flex-1"></div>
+        <div
+          class="flex max-w-2xl flex-col items-start justify-between gap-4 md:flex-row"
+        >
+          <div>
+            <h1 class="text-white">G'day students and researchers!</h1>
+            <p class="animation-delay-[300ms] text-white" id="tagline">
+              Unlock the potential of planning and optimisation with us on 3-7th
+              November in Melbourne, Australia
+            </p>
+          </div>
+        </div>
+
+        <a href="https://forms.gle/zpsGRP7UGZDazbYz9">
+          <button
+            class="mt-12 min-w-max rounded-xl bg-skin-accent px-6 py-4 text-sm font-medium text-white transition-opacity hover:opacity-50"
+          >
+            Submit an expression of interest
+          </button></a
+        >
       </div>
     </section>
     <section>
       <div class="my-12 mb-6 py-16 @container">
+        <div class="mb-4 h-10 w-10 rounded-full rounded-bl-none bg-[#ff375f]">
+        </div>
         <h2 class="mb-8 max-w-xl text-3xl tracking-tight sm:mb-12 sm:text-4xl">
           Learn cutting-edge planning and optimisation.
         </h2>
-        <div class="flex flex-col-reverse gap-8 @2xl:flex-row">
+        <div class="flex flex-col-reverse gap-8 @4xl:flex-row">
           <div class="flex-1">
             <div class="prose mb-8 w-full leading-6">
               <Copy>
                 <a href="https://forms.gle/zpsGRP7UGZDazbYz9">
                   <button
-                    class="mb-6 min-w-max rounded-md bg-skin-accent px-4 py-2 text-sm text-skin-inverted text-white transition-opacity hover:opacity-50"
+                    class="mb-6 min-w-max rounded-md bg-skin-accent px-4 py-2 text-sm text-white transition-opacity hover:opacity-50"
                     >Submit an expression of interest</button
                   >
                 </a>
@@ -62,7 +75,7 @@ const tempLocationImage =
               [
                 {
                   label: "Where",
-                  image: tempLocationImage,
+                  image: tempHeroImage,
                   value:
                     "Silverwater Resort, San Remo Bay, Melbourne, Australia",
                 },
@@ -94,9 +107,9 @@ const tempLocationImage =
             .map((_, i) => ({
               title: ["Program", "Personel", "Contact"][i % 3],
               description: [
-                "View program schedule.",
-                "See our organisers and featured speakers.",
-                "Etc etc.",
+                "View program schedule",
+                "See our organisers and featured speakers",
+                "See contact information",
               ][i % 3],
             }))
             .map(({ title, description }) => (
@@ -122,10 +135,11 @@ const tempLocationImage =
   }
 
   #hero {
-    @apply mt-12 sm:mt-16;
+    @apply mt-4 flex min-h-[50vh] flex-col items-start rounded-2xl bg-cover bg-center p-8 sm:p-12 md:mt-0;
   }
+
   #hero h1 {
-    @apply inline-block text-4xl font-medium tracking-tight sm:text-6xl sm:leading-none;
+    @apply inline-block text-4xl font-medium tracking-tight sm:text-5xl sm:leading-none;
   }
   #hero .rss-link {
     @apply mb-6;

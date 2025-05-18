@@ -5,7 +5,7 @@ export const SITE: Site = {
   baseUrl: "summer-school-2025",
   author: "Kevin Zheng",
   desc: "Summer school of optimisation and planning 2025.",
-  title: "APSS/25",
+  title: "Optimisation and planning summer school",
   ogImage: "ssai-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 10,
@@ -17,7 +17,12 @@ export const LOCALE = {
   langTag: [], // BCP 47 Language Tags. Set this empty [] to use the environment default
 } as const;
 
-export const LOGO_IMAGE = { enable: false, svg: false, width: 32, height: 32 };
+export const LOGO_IMAGE = {
+  enable: true,
+  svg: true,
+  width: 16 * 3,
+  height: 16,
+};
 
 export const SOCIALS: SocialObjects = [
   {

@@ -18,19 +18,19 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
     <section>
       <div
         id="hero"
-        style=`background-image: linear-gradient(to bottom, #00000099, #24292e77), url(${tempLocationImage})`
+        style=`background-image: linear-gradient(to right, #161616aa 120px, #24292e00 960px), url(${tempLocationImage})`
       >
         <div
-          class="mb-24 flex w-full max-w-64 flex-col items-start gap-2 sm:max-w-max sm:flex-row sm:items-center sm:gap-4"
+          class="mb-24 flex w-full max-w-64 flex-col items-start gap-2 md:max-w-max md:flex-row md:items-center md:gap-4"
         >
-          <img src=`${import.meta.env.BASE_URL}/logo-wide.svg` class="h-4" />
-          <span class="font-medium leading-tight text-white"
+          <img src=`${import.meta.env.BASE_URL}/logo-wide.svg` class="h-3" />
+          <span class="text-sm font-medium leading-tight text-white"
             >Optimisation and planning summer school 2025</span
           >
         </div>
         <div class="flex-1"></div>
         <div
-          class="flex max-w-[min(640px,70vw)] flex-col items-start justify-between gap-4 md:flex-row"
+          class="flex max-w-[640px] flex-col items-start justify-between gap-4 md:flex-row"
         >
           <div>
             <h1 class="text-white">
@@ -68,7 +68,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
               <Copy>
                 <a href="https://forms.gle/zpsGRP7UGZDazbYz9">
                   <button
-                    class="mb-6 min-w-max rounded-md bg-skin-accent px-4 py-2 text-sm text-white transition-opacity hover:opacity-50"
+                    class="mb-6 min-w-max rounded-lg bg-skin-accent px-4 py-2 text-sm text-white transition-opacity hover:opacity-50"
                     >Submit an expression of interest</button
                   >
                 </a>
@@ -88,11 +88,11 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
 
                 { label: "Apply before", value: "23 June 2025" },
               ].map(({ label, value, image }) => (
-                <div class="mb-2 rounded-md bg-skin-inverted/5">
+                <div class="mb-2 rounded-lg bg-skin-inverted/5">
                   {image && (
                     <div
                       style={`background-image: url(${image})`}
-                      class="h-48 w-full rounded-md bg-cover bg-center"
+                      class="h-48 w-full rounded-lg bg-cover bg-center"
                     />
                   )}
                   <div class="p-4">
@@ -123,7 +123,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
             .map(({ title, description }) => (
               <a
                 href={`${import.meta.env.BASE_URL}/${slugifyStr(title)}`}
-                class="flex cursor-pointer flex-col gap-2 rounded-md bg-skin-inverted/5 p-4 transition-opacity hover:opacity-50"
+                class="flex cursor-pointer flex-col gap-2 rounded-lg bg-skin-inverted/5 p-4 transition-opacity hover:opacity-50"
               >
                 <h2 class="pr-4">{title}</h2>
                 <p class="pr-4 text-sm"> {description}</p>

@@ -35,10 +35,8 @@ const { activeNav } = Astro.props;
           class="hamburger-menu focus-outline material-symbols-outlined"
           aria-label="Open Menu"
           aria-expanded="false"
-          aria-controls="menu-items"
+          aria-controls="menu-items">menu</button
         >
-          top_panel_open
-        </button>
         <div id="menu-items-wrapper">
           <ul id="menu-items" class="overflow-hidden">
             <li>
@@ -190,7 +188,6 @@ const { activeNav } = Astro.props;
         menuExpanded ? "Open Menu" : "Close Menu"
       );
       menuBtn.classList.toggle("open");
-      menuBtn.innerHTML = menuExpanded ? "top_panel_open" : "top_panel_close";
       menuItemsWrapper?.classList.toggle("open");
     });
   }

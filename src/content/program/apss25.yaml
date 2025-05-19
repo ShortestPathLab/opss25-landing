@@ -95,19 +95,20 @@
     name: "Workshops and Challenges"
     description: "Hands-on workshops and challenge sessions run in parallel throughout the day."
     events:
-    - image: https://images.unsplash.com/photo-1705453168890-6c244eb82942?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-      name: "Option 1: Learning Under Uncertainty"
+    # - image: https://images.unsplash.com/photo-1705453168890-6c244eb82942?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      name: "Learning Under Uncertainty"
       presenters:
       - Hanna Kurniawati
       description: "Explore reinforcement learning and task-motion planning under uncertainty."
       elevated: true
-    - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-      name: "Option 2: Pacman Planning Challenge"
-      presenters:
-      - Sebastian
-      - Nir
-      description: "Guide Pacman through a series of planning puzzles – strategic thinking required!"
-      elevated: true
+    # - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    #   name: "Option 2: Pacman Planning Challenge"
+    #   presenters:
+    #   - Sebastian
+    #   - Nir
+    #   description: "Guide Pacman through a series of planning puzzles – strategic thinking required!"
+    #   elevated: true
     # - image: https://images.unsplash.com/photo-1691613910005-da9010169a50?q=80&w=2549&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     #   name: "Option 3: Angry Birds KR Challenge"
     #   presenters:

@@ -14,7 +14,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
 
 <Layout>
   <Header slot="header" />
-  <main id="main-content" class="enter overflow-hidden">
+  <main id="main-content" class="enter">
     <section>
       <div
         id="hero"
@@ -30,10 +30,12 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
         </div>
         <div class="flex-1"></div>
         <div
-          class="flex max-w-2xl flex-col items-start justify-between gap-4 md:flex-row"
+          class="flex max-w-[min(640px,70vw)] flex-col items-start justify-between gap-4 md:flex-row"
         >
           <div>
-            <h1 class="text-white">G'day students and researchers!</h1>
+            <h1 class="text-white">
+              Learn cutting-edge optimisation and planning
+            </h1>
             <p class="animation-delay-[300ms] text-white" id="tagline">
               Unlock the potential of planning and optimisation with us on 3-7th
               November in Melbourne, Australia
@@ -45,7 +47,8 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
           <button
             class="mt-12 min-w-max rounded-xl bg-skin-accent px-6 py-4 text-sm font-medium text-white transition-opacity hover:opacity-50"
           >
-            Submit an expression of interest
+            Submit an <span class="sm:hidden">EOI</span>
+            <span class="hidden sm:inline">expression of interest</span>
           </button></a
         >
       </div>
@@ -54,8 +57,10 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
       <div class="my-12 mb-6 py-16 @container">
         <div class="mb-4 h-10 w-10 rounded-full rounded-bl-none bg-[#ff375f]">
         </div>
-        <h2 class="mb-8 max-w-xl text-3xl tracking-tight sm:mb-12 sm:text-4xl">
-          Learn cutting-edge planning and optimisation.
+        <h2
+          class="mb-8 max-w-[min(480px,90vw)] text-3xl tracking-tight sm:mb-12 sm:text-4xl"
+        >
+          Learn optimisation and planning from world-class researchers
         </h2>
         <div class="flex flex-col-reverse gap-8 @4xl:flex-row">
           <div class="flex-1">
@@ -70,7 +75,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
               </Copy>
             </div>
           </div>
-          <div class="flex-0 @2xl:w-max">
+          <div class="flex-0 h-max @2xl:sticky @2xl:top-12 @2xl:w-max">
             {
               [
                 {
@@ -80,6 +85,8 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
                     "Silverwater Resort, San Remo Bay, Melbourne, Australia",
                 },
                 { label: "When", value: "3-7th November 2025" },
+
+                { label: "Apply before", value: "23 June 2025" },
               ].map(({ label, value, image }) => (
                 <div class="mb-2 rounded-md bg-skin-inverted/5">
                   {image && (
@@ -175,7 +182,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
   }
 
   #hero h1 {
-    @apply inline-block text-3xl font-medium tracking-tight sm:text-5xl sm:leading-none;
+    @apply inline-block text-balance text-4xl font-medium tracking-tight sm:text-5xl sm:leading-none;
   }
   #hero .rss-link {
     @apply mb-6;
@@ -187,7 +194,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
     @apply max-w-xl text-sm font-normal opacity-70;
   }
   #hero #tagline {
-    @apply mb-2 mt-2 max-w-xl text-balance tracking-tight sm:mt-6;
+    @apply mb-2 mt-2 max-w-xl text-balance text-sm font-medium tracking-tight sm:mt-6 sm:text-base;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */

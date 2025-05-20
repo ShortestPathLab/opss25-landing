@@ -47,7 +47,7 @@
       elevated: true
       image: https://i.ytimg.com/vi/a4IMa5MjAGo/maxresdefault.jpg
       imageOffset: '20%'
-      description: "An introduction to modelling problems using MiniZinc, a powerful language for constraint programming."
+      description: "An introduction to modelling problems using MiniZinc, a powerful language for modelling and solving combinatorial optimisation problems. Guido will give an overview of the MiniZinc system and present the basics of how to use it to model and solve complex problems."
   - time: '10:30'
     events:
     - name: "🫖 Morning tea"
@@ -56,7 +56,7 @@
     events:
     - name: "Guided session"
       elevated: true
-      description: "Continue learning through practical, instructor-led problem-solving."
+      description: "In this session, you will work in small teams to turn problem descriptions into models and solutions. We will have experts in the room who will help you get started, and you will get feedback on your models along the way from our automatic evaluation system."
       presenters:
       - Guido Tack
   - time: '13:00-14:00'
@@ -65,9 +65,9 @@
       description: "Lunch served on-site."
   - time: '14:00-15:30'
     events:
-    - name: "Deep dive: MiniZinc"
+    - name: "Deep dive: MiniZinc for scheduling, packing, and routing"
       elevated: true
-      description: "Expand on the morning’s session with more advanced modelling techniques."
+      description: "Expanding on the morning session, we will look at more advanced modelling techniques, focusing on real-world problems and solution methods."
       presenters:
       - Guido Tack
   - time: '15:30'
@@ -76,9 +76,9 @@
       description: "Afternoon tea served on-site."
   - time: '16:00-18:00'
     events:
-    - name: "Hands-On MiniZinc lab"
+    - name: "Hands-on MiniZinc lab"
       elevated: true
-      description: "Tackle practical exercises and receive one-on-one guidance."
+      description: "Similar to the first modelling practice session, you will use your new knowledge and skills to work in a small team on modelling and solving a realistic optimisation problem with MiniZinc."
       presenters:
       - Guido Tack
   - time: '19:00'
@@ -87,9 +87,9 @@
       description: "Dinner served on-site."
   - time: 'Evening'
     events:
-    - name: "Competition/hackathon"
+    - name: "Modelling competition"
       elevated: true
-      description: "A fun challenge to put your new skills into practice."
+      description: "We will give you a set of challenging problems to model and solve. Work in a team and track your progress on the live leaderboard!"
 
 - date: '2024-11-05'
   events:
@@ -129,7 +129,7 @@
   - time: All day
     events:
     - name: "Robot Runners – coordinating teams of agents"
-      image: https://www.leagueofrobotrunners.org/external_page_resource/images/mission-4.jpg
+      image: https://www.leagueofrobotrunners.org/2024-banner-mapf.jpg
       presenters:
       - Daniel Harabor
       - Mor Vered

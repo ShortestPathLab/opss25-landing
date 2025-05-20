@@ -48,7 +48,7 @@ const { activeNav } = Astro.props;
               </a>
             </li>
             {
-              ["Program", "Personel", "Contact"].map(link => (
+              ["Program", "Speakers", "Organisers"].map(link => (
                 <li>
                   <a
                     href={`${import.meta.env.BASE_URL}/${slugifyStr(link)}`}

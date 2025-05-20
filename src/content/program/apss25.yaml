@@ -19,15 +19,20 @@
     events:
     - name: Lunch
       description: "Lunch served on-site."
-  - time: '14:00-17:00'
+  - time: '14:00-15:00'
     events:
     - name: "Welcome Session"
       elevated: true
-      description: "Setup, introductions, week overview, and an icebreaker activity to get to know each other."
-  - time: '17:00'
+      description: "Introductions, week overview, and an icebreaker activity to get to know each other."
+  - time: '15:00-18:00'
     events:
-    - name: "🎈 Social events"
-      description: "Opportunities to catch up with colleagues and friends."
+    - name: "Configuration and setup"
+      elevated: true
+      description: "Prepare for the week ahead by installing and configuring software environments."
+  - time: '18:00'
+    events:
+    - name: "🎈 Dinner and social events"
+      description: "Opportunities to interact and connect with peers."
 - date: '2024-11-04'
   events:
   - time: '07:00-09:00'
@@ -40,7 +45,7 @@
       presenters:
       - Guido Tack
       elevated: true
-      image: https://ardc.edu.au/wp-content/uploads/2024/11/srs-minizinc-feature-image-583-x-345-580x345.png
+      image: https://i.ytimg.com/vi/a4IMa5MjAGo/maxresdefault.jpg
       imageOffset: '20%'
       description: "An introduction to modelling problems using MiniZinc, a powerful language for constraint programming."
   - time: '10:30'
@@ -78,22 +83,17 @@
       - Guido Tack
   - time: '19:00'
     events:
-    - name: Dinner
+    - name: 🍝 Dinner and social events
       description: "Dinner served on-site."
-  - time: '20:00-20:59'
+  - time: 'Evening'
     events:
-    - name: "Mini MiniZinc Challenge"
+    - name: "Competition/Hackathon"
       elevated: true
       description: "A fun challenge to put your new skills into practice."
-  - time: '21:00'
-    events:
-    - name: "🎈 Social events"
-      description: "Opportunities to catch up with colleagues and friends."
+
 - date: '2024-11-05'
   events:
   - time: All day
-    name: "Workshops and Challenges"
-    description: "Hands-on workshops and challenge sessions run in parallel throughout the day."
     events:
     # - image: https://images.unsplash.com/photo-1705453168890-6c244eb82942?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
@@ -115,41 +115,38 @@
     #   - Jochen Renz
     #   description: "Tackle knowledge representation challenges with an Angry Birds twist."
     #   elevated: true
-  - time: Evening
+  - time: '19:00'
     events:
-    - name: "Dinner at Venue"
+    - name: 🍝 Dinner and social events
       description: "Dinner served on-site."
-  - time: '20:00-20:59'
+  - time: Evening
     events:
     - name: "Competition/Hackathon"
       elevated: true
-      description: "Continue working on the competition or workshop projects – solo or in teams."
-  - time: '21:00'
-    events:
-    - name: "🎈 Social events"
-      description: "Opportunities to catch up with colleagues and friends."
+      description: "Test your understanding and work on a challenge problem related to learning under uncertainty."
 - date: '2024-11-06'
   events:
   - time: All day
     events:
-    - name: "Option 1: Robo Runners – Planning with Uncertainty"
+    - name: "Robot Runners – Coordinating teams of agents"
+      image: https://www.leagueofrobotrunners.org/external_page_resource/images/mission-4.jpg
       presenters:
       - Daniel Harabor
       - Mor Vered
-      description: "Plan under uncertainty using simulated robots in dynamic environments. Implement various search algorithms such as prioritised planning, spatial-temporal A* in Piglet"
+      description: "Tackle the core combinatorial challenges found in cooperative multi-robot coordination problems: robot dynamics, lifelong planning, task assignment and real-time execution. We explore these topics using the tools of heuristic-driven state-space search."
       elevated: true
-    - name: "Option 2: Flatland Challenge"
-      description: "Optimise multi-agent routing in the railway-themed Flatland environment."
-      elevated: true
-  - time: '20:00-20:59'
+    # - name: "Option 2: Flatland Challenge"
+    #   description: "Optimise multi-agent routing in the railway-themed Flatland environment."
+    #   elevated: true
+  - time: '19:00'
+    events:
+    - name: 🍝 Dinner and social events
+      description: "Dinner served on-site."
+  - time: Evening
     events:
     - name: "Competition/Hackathon"
       elevated: true
-      description: "Refine your solutions or explore new directions ahead of the final day."
-  - time: '21:00'
-    events:
-    - name: "🎈 Social events"
-      description: "Opportunities to catch up with colleagues and friends."
+      description: "Work on a challenge problem related to multi-robot planning."
 
 - date: '2024-11-07'
   events:

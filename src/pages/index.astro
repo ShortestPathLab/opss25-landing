@@ -45,10 +45,11 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
 
         <a href="https://forms.gle/zpsGRP7UGZDazbYz9">
           <button
-            class="mt-12 min-w-max rounded-xl bg-skin-accent px-6 py-4 text-sm font-medium text-white transition-opacity hover:opacity-50"
+            class="mt-12 min-w-max rounded-xl bg-skin-accent px-6 py-4 text-sm font-medium text-white transition-opacity hover:opacity-75"
           >
-            Submit an <span class="sm:hidden">EOI</span>
-            <span class="hidden sm:inline">expression of interest</span>
+            Apply now
+            <!-- Submit an <span class="sm:hidden">EOI</span>
+            <span class="hidden sm:inline">expression of interest</span> -->
           </button></a
         >
       </div>
@@ -65,14 +66,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
         <div class="flex flex-col-reverse gap-8 @4xl:flex-row">
           <div class="flex-1">
             <div class="prose mb-8 w-full leading-6">
-              <Copy>
-                <a href="https://forms.gle/zpsGRP7UGZDazbYz9">
-                  <button
-                    class="mb-6 min-w-max rounded-lg bg-skin-accent px-4 py-2 text-sm text-white transition-opacity hover:opacity-50"
-                    >Submit an expression of interest</button
-                  >
-                </a>
-              </Copy>
+              <Copy />
             </div>
           </div>
           <div class="flex-0 h-max @2xl:sticky @2xl:top-12 @2xl:w-max">
@@ -85,8 +79,6 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
                     "Silverwater Resort, San Remo Bay, Melbourne, Australia",
                 },
                 { label: "When", value: "3-7th November 2025" },
-
-                { label: "Apply before", value: "23 June 2025" },
               ].map(({ label, value, image }) => (
                 <div class="mb-2 rounded-lg bg-skin-inverted/5">
                   {image && (
@@ -102,6 +94,12 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
                 </div>
               ))
             }
+            <a href="https://forms.gle/zpsGRP7UGZDazbYz9">
+              <button
+                class="mb-6 min-w-full rounded-lg bg-skin-accent px-6 py-4 text-sm text-white transition-opacity hover:opacity-75"
+                >Apply now</button
+              >
+            </a>
           </div>
         </div>
       </div>
@@ -113,11 +111,11 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
         {
           Array.from({ length: 3 })
             .map((_, i) => ({
-              title: ["Program", "Personel", "Contact"][i % 3],
+              title: ["Program", "Speakers", "Organisers"][i % 3],
               description: [
                 "View program schedule",
-                "See our organisers and featured speakers",
-                "See contact information",
+                "View bios of featured speakers",
+                "See our organisers and contact info",
               ][i % 3],
             }))
             .map(({ title, description }) => (

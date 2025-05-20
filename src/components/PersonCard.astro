@@ -5,7 +5,7 @@ type A = Partial<CollectionEntry<"team">["data"]>;
 
 export interface Props extends A {}
 
-const { image, title, description } = Astro.props;
+const { image, title, description, affiliation } = Astro.props;
 ---
 
 <div class="animate-fadeIn min-w-[min(190px,100%)] flex-1">
@@ -15,15 +15,25 @@ const { image, title, description } = Astro.props;
     <div
       class="rounded-full bg-skin-inverted bg-cover bg-center"
       style={{
-        width: "36px",
-        height: "36px",
+        width: "42px",
+        height: "42px",
         backgroundImage: `url(${image})`,
       }}
     >
     </div>
     <div class=`flex flex-1 flex-col`>
       <h4 class={`mb-1 inline-block font-normal leading-6`}>{title}</h4>
-      <div class="text-sm opacity-80">{description}</div>
+      <p class="text-sm text-skin-base/80">{description}</p>
+      {
+        !!affiliation && (
+          <div class="mt-6 flex flex-1 flex-wrap items-end gap-2">
+            <span class="text-xs font-medium text-skin-base/80">
+              Institution
+            </span>
+            <span class="text-xs text-skin-base/80">{affiliation}</span>
+          </div>
+        )
+      }
     </div>
   </li>
 </div>

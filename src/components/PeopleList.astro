@@ -6,26 +6,15 @@ import { entries, filter, groupBy } from "lodash-es";
 
 export interface Props {
   collection: string;
+  width?: number;
 }
 
 const { props } = Astro;
 
 const members = await getCollection("team");
-const groups = groupBy(
-  filter(members, c => c.data.tag === props.collection),
-  "data.tag"
-);
+const items = filter(members, c => !!c.data.tag?.includes?.(props.collection));
 ---
 
-{
-  entries(groups).map(([g, members]) => (
-    <>
-      {/* <h3>{g}</h3> */}
-      <Grid class="not-prose gap-2" width={420}>
-        {members.map(member => (
-          <PersonCard {...member.data} />
-        ))}
-      </Grid>
-    </>
-  ))
-}
+<Grid class="not-prose gap-2" width={props.width ?? 420}>
+  {items.map(member => <PersonCard {...member.data} />)}
+</Grid>

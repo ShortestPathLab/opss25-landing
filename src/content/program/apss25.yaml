@@ -7,12 +7,12 @@
       description: Participants arriving from Europe and the US.
   - time: '09:00'
     events:
-    - name: "🚌 Bus Departure"
+    - name: "🚌 Bus departure"
       elevated: true
       description: "Group bus departs Southern Cross Station (Charlotte Street) for the venue. Approx. 2-hour journey."
   - time: '10:00-11:00'
     events:
-    - name: "Check-in & Registration"
+    - name: "Check-in & registration"
       elevated: true
       description: "Settle in with tea and coffee as you register and collect your welcome pack."
   - time: '13:00-14:00'
@@ -21,7 +21,7 @@
       description: "Lunch served on-site."
   - time: '14:00-15:00'
     events:
-    - name: "Welcome Session"
+    - name: "Welcome session"
       elevated: true
       description: "Introductions, week overview, and an icebreaker activity to get to know each other."
   - time: '15:00-18:00'
@@ -50,11 +50,11 @@
       description: "An introduction to modelling problems using MiniZinc, a powerful language for constraint programming."
   - time: '10:30'
     events:
-    - name: "🫖 Morning Tea"
+    - name: "🫖 Morning tea"
       description: "Morning tea served on-site."
   - time: '11:00-13:00'
     events:
-    - name: "Guided Session"
+    - name: "Guided session"
       elevated: true
       description: "Continue learning through practical, instructor-led problem-solving."
       presenters:
@@ -65,18 +65,18 @@
       description: "Lunch served on-site."
   - time: '14:00-15:30'
     events:
-    - name: "Deep Dive: MiniZinc"
+    - name: "Deep dive: MiniZinc"
       elevated: true
       description: "Expand on the morning’s session with more advanced modelling techniques."
       presenters:
       - Guido Tack
   - time: '15:30'
     events:
-    - name: "Afternoon Tea"
+    - name: "Afternoon tea"
       description: "Afternoon tea served on-site."
   - time: '16:00-18:00'
     events:
-    - name: "Hands-On MiniZinc Lab"
+    - name: "Hands-On MiniZinc lab"
       elevated: true
       description: "Tackle practical exercises and receive one-on-one guidance."
       presenters:
@@ -87,7 +87,7 @@
       description: "Dinner served on-site."
   - time: 'Evening'
     events:
-    - name: "Competition/Hackathon"
+    - name: "Competition/hackathon"
       elevated: true
       description: "A fun challenge to put your new skills into practice."
 
@@ -97,7 +97,7 @@
     events:
     # - image: https://images.unsplash.com/photo-1705453168890-6c244eb82942?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-      name: "Learning Under Uncertainty"
+      name: "Learning under uncertainty"
       presenters:
       - Hanna Kurniawati
       description: "Explore reinforcement learning and task-motion planning under uncertainty."
@@ -121,14 +121,14 @@
       description: "Dinner served on-site."
   - time: Evening
     events:
-    - name: "Competition/Hackathon"
+    - name: "Competition/hackathon"
       elevated: true
       description: "Test your understanding and work on a challenge problem related to learning under uncertainty."
 - date: '2024-11-06'
   events:
   - time: All day
     events:
-    - name: "Robot Runners – Coordinating teams of agents"
+    - name: "Robot Runners – coordinating teams of agents"
       image: https://www.leagueofrobotrunners.org/external_page_resource/images/mission-4.jpg
       presenters:
       - Daniel Harabor
@@ -144,7 +144,7 @@
       description: "Dinner served on-site."
   - time: Evening
     events:
-    - name: "Competition/Hackathon"
+    - name: "Competition/hackathon"
       elevated: true
       description: "Work on a challenge problem related to multi-robot planning."
 
@@ -152,7 +152,7 @@
   events:
   - time: '10:00-14:00'
     events:
-    - name: "🎗️ Closing Session & Awards"
+    - name: "🎗️ Closing session & awards"
       description: "Celebrate the week’s achievements. Final presentations and awards for the competition. Hear from the winning teams about their approaches."
   - time: '14:00'
     events:

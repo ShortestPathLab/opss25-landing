@@ -9,7 +9,12 @@ const team = defineCollection({
       description: z.string(),
       url: z.string().optional(),
       image: z.string().optional(),
-      tag: z.string().optional(),
+      affiliation: z.string().optional(),
+      tag: z
+        .string()
+        .array()
+        .or(z.string().transform(s => [s]))
+        .optional(),
     }),
 });
 

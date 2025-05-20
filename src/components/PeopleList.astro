@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import PersonCard from "./PersonCard.astro";
+import { filter } from "lodash-es";
 import Grid from "./Grid.astro";
-import { entries, filter, groupBy } from "lodash-es";
+import PersonCard from "./PersonCard.astro";
 
 export interface Props {
   collection: string;

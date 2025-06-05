@@ -1,12 +1,13 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://pathfinding.ai/", // replace this with your deployed domain
-  baseUrl: "summer-school-2025",
+  domain: "opss25.pathfinding.ai",
+  website: "https://opss25.pathfinding.ai/", // replace this with your deployed domain
+  baseUrl: "/",
   author: "Kevin Zheng",
   desc: "Summer school of optimisation and planning 2025.",
   title: "Optimisation and planning summer school",
-  ogImage: "ssai-og.jpg",
+  ogImage: "opss-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

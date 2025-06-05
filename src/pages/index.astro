@@ -9,7 +9,7 @@ import { slugifyStr } from "@utils/slugify";
 const tempHeroImage =
   "https://www.silverwaterresort.com.au/hs-fs/hubfs/sunset-off-deck-main.jpg?width=1920&height=1280&name=sunset-off-deck-main.jpg";
 
-const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
+const tempLocationImage = `/cover.webp`;
 ---
 
 <Layout>
@@ -23,7 +23,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
         <div
           class="mb-24 flex w-full max-w-64 flex-col items-start gap-2 md:max-w-max md:flex-row md:items-center md:gap-4"
         >
-          <img src=`${import.meta.env.BASE_URL}/logo-wide.svg` class="h-3" />
+          <img src=`/logo-wide.svg` class="h-3" />
           <span class="text-sm font-medium leading-tight text-white"
             >Optimisation and planning summer school 2025</span
           >
@@ -120,7 +120,7 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
             }))
             .map(({ title, description }) => (
               <a
-                href={`${import.meta.env.BASE_URL}/${slugifyStr(title)}`}
+                href={`/${slugifyStr(title)}`}
                 class="flex cursor-pointer flex-col gap-2 rounded-lg bg-skin-inverted/5 p-4 transition-opacity hover:opacity-50"
               >
                 <h2 class="pr-4">{title}</h2>
@@ -134,36 +134,21 @@ const tempLocationImage = `${import.meta.env.BASE_URL}/cover.webp`;
       class="mt-24 flex flex-wrap items-center gap-12 contrast-0 saturate-0"
     >
       <a href="https://www.monash.edu">
-        <img
-          class="w-32"
-          src=`${import.meta.env.BASE_URL}/assets/monash-uni-logo.png`
-        />
+        <img class="w-32" src=`/assets/monash-uni-logo.png` />
       </a>
       <a href="https://www.unimelb.edu.au">
-        <img
-          class="w-32"
-          src=`${import.meta.env.BASE_URL}/assets/melbourne-uni-logo.png`
-        />
+        <img class="w-32" src=`/assets/melbourne-uni-logo.png` />
       </a>
       <a href="https://optima.org.au/">
-        <img
-          class="w-32"
-          src=`${import.meta.env.BASE_URL}/assets/optima-logo.png`
-        />
+        <img class="w-32" src=`/assets/optima-logo.png` />
       </a>
       <a href="https://www.visitmelbourne.com">
-        <img
-          class="w-32"
-          src=`${import.meta.env.BASE_URL}/assets/melbourne-logo.svg`
-        />
+        <img class="w-32" src=`/assets/melbourne-logo.svg` />
       </a>
       <a href="https://www.melbournecb.com">
-        <img
-          class="w-32"
-          src=`${import.meta.env.BASE_URL}/assets/mcb-logo.png`
-        />
+        <img class="w-32" src=`/assets/mcb-logo.png` />
       </a>
-      <img class="w-32" src=`${import.meta.env.BASE_URL}/assets/bev-logo.png` />
+      <img class="w-32" src=`/assets/bev-logo.png` />
     </section>
   </main>
 

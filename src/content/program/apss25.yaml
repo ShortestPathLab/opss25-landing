@@ -126,33 +126,64 @@
       description: "Test your understanding and work on a challenge problem related to learning under uncertainty."
 - date: '2024-11-06'
   events:
-  - time: All day
-    events:
-    - name: "Robot Runners – coordinating teams of agents"
+  - time: '9:00-11:00'
+    events: 
+    - name: Introduction to Multi-Agent Path Finding
       image: https://www.leagueofrobotrunners.org/2024-banner-mapf.jpg
+      presenters:
+      - Daniel Harabor
+      description: |-
+        An introduction to Multi-Agent Path Finding (MAPF) problems, where multiple agents must navigate a shared environment without colliding. 
+        
+        Topics to be covered: 
+        1. Overview, motivation, and applications of MAPF
+        2. Coordinating teams of agents using heuristic search
+        3. Simple models: joint space model and heuristic search
+        4. Optimal MAPF and CBS
+        5. Operator decomposition to manage branching factor
+        6. Independence detection
+      elevated: true
+  - time: '11:00-13:00'
+    events:
+    - name: "Guided session"
+      elevated: true
+      description: Hands-on experimentation with the League of Robot Runners starter kit.
+      presenters:
+      - Daniel Harabor
+  - time: '14:00-15:30'
+    events:
+    - name: >- 
+        Presentation: "Closing the gap between theory and implementation"
+      image: https://i.ytimg.com/vi/7MOQOvGJyn4/hq720.jpg
+      presenters:
+      - Daniel Harabor
+      elevated: true
+      description: |-
+        This session bridges theoretical concepts and practical implementations in MAPF. We will explore various MAPF variants, including suboptimal MAPF and lifelong MAPF, while addressing real-time constraints and practical considerations.
+        
+        Discussion points:
+        - Bridging theoretical concepts and practical implementations
+        - MAPF variants: suboptimal MAPF, lifelong MAPF
+        - Real-time constraints and practical considerations
+        - Suboptimal approaches: Large Neighborhood Search, PIBT, policy-driven planning, and learning
+  - time: '16:00-18:00'
+    events:
+    - name: "Hands-on lab and League of Robot Runners competition"
       presenters:
       - Daniel Harabor
       - Mor Vered
       description: "Tackle the core combinatorial challenges found in cooperative multi-robot coordination problems: robot dynamics, lifelong planning, task assignment and real-time execution. We explore these topics using the tools of heuristic-driven state-space search."
       elevated: true
-    # - name: "Option 2: Flatland Challenge"
-    #   description: "Optimise multi-agent routing in the railway-themed Flatland environment."
-    #   elevated: true
   - time: '19:00'
     events:
     - name: 🍝 Dinner and social events
       description: "Dinner served on-site."
-  - time: Evening
-    events:
-    - name: "Competition/hackathon"
-      elevated: true
-      description: "Work on a challenge problem related to multi-robot planning."
-
 - date: '2024-11-07'
   events:
   - time: '10:00-14:00'
     events:
     - name: "🎗️ Closing session & awards"
+      elevated: true
       description: "Celebrate the week’s achievements. Final presentations and awards for the competition. Hear from the winning teams about their approaches."
   - time: '14:00'
     events:

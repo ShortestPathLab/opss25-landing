@@ -25,7 +25,7 @@ const { image, name, description, elevated, presenters, imageOffset } =
       class=`flex flex-1 flex-col py-4 ${elevated ? "p-4" : image ? "pt-4" : ""}`
     >
       <h2 class={`mb-1 inline-block font-normal leading-6`}>{name}</h2>
-      <div class="text-sm opacity-80">{description}</div>
+      <div class="whitespace-pre-line text-sm opacity-80">{description}</div>
       {
         !!presenters?.length && (
           <div class="mt-6 flex flex-1 flex-wrap items-end gap-2">

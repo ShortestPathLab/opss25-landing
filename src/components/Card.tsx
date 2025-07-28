@@ -78,7 +78,7 @@ export function ParallaxImage({
     <div
       ref={ref}
       {...props}
-      className={`h-32 w-full rounded-lg bg-cover bg-center ${props.className}`}
+      className={`h-48 w-full rounded-lg bg-cover bg-center ${props.className}`}
       style={{
         backgroundImage: `url(${image})`,
         ...props.style,

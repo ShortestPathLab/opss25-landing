@@ -10,7 +10,7 @@
     - name: "🚌 Bus departure"
       elevated: true
       description: "Group bus departs Southern Cross Station (Charlotte Street) for the venue. Approx. 2-hour journey."
-  - time: '10:00-11:00'
+  - time: '10:00-13:00'
     events:
     - name: "Check-in & registration"
       elevated: true
@@ -19,12 +19,32 @@
     events:
     - name: Lunch
       description: "Lunch served on-site."
-  - time: '14:00-15:00'
+  # - time: '14:00-15:00'
+  #   events:
+  #   - name: "Welcome session"
+  #     elevated: true
+  #     description: "Introductions, week overview, and an icebreaker activity to get to know each other."
+  - time: '14:00-15:30'
     events:
-    - name: "Welcome session"
+    - name: Introduction to classical planning and PDDL
+      image: /assets/search.png
       elevated: true
-      description: "Introductions, week overview, and an icebreaker activity to get to know each other."
-  - time: '15:00-18:00'
+      description: An introduction to classical planning, covering the basics of PDDL (Planning Domain Definition Language) and its applications in AI planning.
+      presenters:
+      - Nir Lipovetzky
+  - time: '15:30-16:00'
+    events:
+    - name: "🫖 Afternoon tea"
+      description: "Take a break with afternoon tea."
+  - time: '16:00-17:30'
+    events:
+    - name: "Hands-on PDDL lab"
+      elevated: true
+      description: "A practical session where you will work with PDDL to create and solve planning problems. This hands-on lab will help you apply the concepts learned in the previous session."
+      presenters:
+      - Nir Lipovetzky
+      - Mor Vered
+  - time: '17:30-18:00'
     events:
     - name: "Configuration and setup"
       elevated: true
@@ -96,7 +116,7 @@
   - time: All day
     events:
     # - image: https://images.unsplash.com/photo-1705453168890-6c244eb82942?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    - image: /assets/robot.png
       name: "Learning under uncertainty"
       presenters:
       - Hanna Kurniawati

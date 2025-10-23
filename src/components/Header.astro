@@ -40,16 +40,18 @@ const { activeNav } = Astro.props;
               <a href=`/` class={!activeNav ? "active" : undefined}> Home </a>
             </li>
             {
-              ["Program", "Speakers", "Organisers"].map(link => (
-                <li>
-                  <a
-                    href={`/${slugifyStr(link)}`}
-                    class={activeNav === slugifyStr(link) ? "active" : ""}
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))
+              ["Program", "Speakers", "Organisers", "Code of conduct"].map(
+                link => (
+                  <li class="whitespace-nowrap">
+                    <a
+                      href={`/${slugifyStr(link)}`}
+                      class={activeNav === slugifyStr(link) ? "active" : ""}
+                    >
+                      {link}
+                    </a>
+                  </li>
+                )
+              )
             }
             {
               SITE.lightAndDarkMode && (

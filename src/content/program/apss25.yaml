@@ -1,212 +1,238 @@
-- date: '2024-11-03'
+- date: "2024-11-03"
   events:
-  - time: '06:00-07:00'
-    events:
-    - name: Arrivals
-      elevated: true
-      description: Participants arriving from Europe and the US.
-  - time: '09:00'
-    events:
-    - name: "🚌 Bus departure"
-      elevated: true
-      description: "Group bus departs Southern Cross Station (Charlotte Street) for the venue. Approx. 2-hour journey."
-  - time: '10:00-13:00'
-    events:
-    - name: "Check-in & registration"
-      elevated: true
-      description: "Settle in with tea and coffee as you register and collect your welcome pack."
-  - time: '13:00-14:00'
-    events:
-    - name: Lunch
-      description: "Lunch served on-site."
-  # - time: '14:00-15:00'
-  #   events:
-  #   - name: "Welcome session"
-  #     elevated: true
-  #     description: "Introductions, week overview, and an icebreaker activity to get to know each other."
-  - time: '14:00-15:30'
-    events:
-    - name: Introduction to classical planning and PDDL
-      image: /assets/search.png
-      elevated: true
-      description: An introduction to classical planning, covering the basics of PDDL (Planning Domain Definition Language) and its applications in AI planning.
-      presenters:
-      - Nir Lipovetzky
-  - time: '15:30-16:00'
-    events:
-    - name: "🫖 Afternoon tea"
-      description: "Take a break with afternoon tea."
-  - time: '16:00-17:30'
-    events:
-    - name: "Hands-on PDDL lab"
-      elevated: true
-      description: "A practical session where you will work with PDDL to create and solve planning problems. This hands-on lab will help you apply the concepts learned in the previous session."
-      presenters:
-      - Nir Lipovetzky
-      - Mor Vered
-  - time: '17:30-18:00'
-    events:
-    - name: "Configuration and setup"
-      elevated: true
-      description: "Prepare for the week ahead by installing and configuring software environments."
-  - time: '18:00'
-    events:
-    - name: "🎈 Dinner and social events"
-      description: "Opportunities to interact and connect with peers."
-- date: '2024-11-04'
+    - time: "06:00-07:00"
+      events:
+        - name: Arrivals
+          elevated: true
+          description: Participants arriving from Europe and the US.
+    - time: "10:00"
+      events:
+        - name: "🚌 Bus departure"
+          elevated: true
+          description: "Group bus departs Southern Cross Station (Charlotte Street) for the venue. Approx. 2-hour journey."
+    - time: "11:00-13:00"
+      events:
+        - name: "📋 Check-in, registration and morning tea"
+          elevated: true
+          description: "Settle in with tea and coffee as you register and collect your welcome pack. Morning tea served on-site at the Foyer."
+    - time: "13:00-14:00"
+      events:
+        - name: Lunch
+          description: "Lunch served on-site at the Watermark Restaurant."
+    - time: "14:00-15:30"
+      events:
+        - name: Introduction to classical planning and PDDL
+          image: /assets/search.png
+          elevated: true
+          description: An introduction to classical planning, covering the basics of PDDL (Planning Domain Definition Language) and its applications in AI planning.
+          presenters:
+            - Nir Lipovetzky
+    - time: "15:30-16:00"
+      events:
+        - name: "🫖 Afternoon tea"
+          description: "Take a break with afternoon tea at the Foyer."
+    - time: "16:00-17:30"
+      events:
+        - name: "Hands-on PDDL lab"
+          elevated: true
+          description: "A practical session where you will work with PDDL to create and solve planning problems. This hands-on lab will help you apply the concepts learned in the previous session."
+          presenters:
+            - Nir Lipovetzky
+            - Mor Vered
+    - time: "17:30-18:00"
+      events:
+        - name: "Configuration and setup"
+          elevated: true
+          description: "Prepare for the week ahead by installing and configuring software environments."
+    - time: "18:00"
+      events:
+        - name: "🎈 Social events"
+          description: "Opportunities to interact and connect with peers."
+          elevated: true
+- date: "2024-11-04"
   events:
-  - time: '07:00-09:00'
-    events:
-    - name: Breakfast
-      description: "Breakfast served on-site."
-  - time: '09:00-10:30'
-    events:
-    - name: "Modelling with MiniZinc"
-      presenters:
-      - Guido Tack
-      elevated: true
-      image: https://i.ytimg.com/vi/a4IMa5MjAGo/maxresdefault.jpg
-      imageOffset: '20%'
-      description: "An introduction to modelling problems using MiniZinc, a powerful language for modelling and solving combinatorial optimisation problems. Guido will give an overview of the MiniZinc system and present the basics of how to use it to model and solve complex problems."
-  - time: '10:30'
-    events:
-    - name: "🫖 Morning tea"
-      description: "Morning tea served on-site."
-  - time: '11:00-13:00'
-    events:
-    - name: "Guided session"
-      elevated: true
-      description: "In this session, you will work in small teams to turn problem descriptions into models and solutions. We will have experts in the room who will help you get started, and you will get feedback on your models along the way from our automatic evaluation system."
-      presenters:
-      - Guido Tack
-  - time: '13:00-14:00'
-    events:
-    - name: Lunch
-      description: "Lunch served on-site."
-  - time: '14:00-15:30'
-    events:
-    - name: "Deep dive: MiniZinc for scheduling, packing, and routing"
-      elevated: true
-      description: "Expanding on the morning session, we will look at more advanced modelling techniques, focusing on real-world problems and solution methods."
-      presenters:
-      - Guido Tack
-  - time: '15:30'
-    events:
-    - name: "Afternoon tea"
-      description: "Afternoon tea served on-site."
-  - time: '16:00-18:00'
-    events:
-    - name: "Hands-on MiniZinc lab"
-      elevated: true
-      description: "Similar to the first modelling practice session, you will use your new knowledge and skills to work in a small team on modelling and solving a realistic optimisation problem with MiniZinc."
-      presenters:
-      - Guido Tack
-  - time: '19:00'
-    events:
-    - name: 🍝 Dinner and social events
-      description: "Dinner served on-site."
-  - time: 'Evening'
-    events:
-    - name: "Modelling competition"
-      elevated: true
-      description: "We will give you a set of challenging problems to model and solve. Work in a team and track your progress on the live leaderboard!"
+    - time: "07:30-08:20"
+      events:
+        - name: Breakfast
+          description: "Breakfast served on-site at the Watermark Restaurant."
+    - time: "09:00-10:30"
+      events:
+        - name: "Modelling with MiniZinc"
+          presenters:
+            - Guido Tack
+          elevated: true
+          image: https://i.ytimg.com/vi/a4IMa5MjAGo/maxresdefault.jpg
+          imageOffset: "20%"
+          description: "An introduction to modelling problems using MiniZinc, a powerful language for modelling and solving combinatorial optimisation problems. Guido will give an overview of the MiniZinc system and present the basics of how to use it to model and solve complex problems."
+    - time: "10:30-11:00"
+      events:
+        - name: "🫖 Morning tea"
+          description: "Morning tea served on-site at the Foyer."
+    - time: "11:00-13:00"
+      events:
+        - name: "Guided session"
+          elevated: true
+          description: "In this session, you will work in small teams to turn problem descriptions into models and solutions. We will have experts in the room who will help you get started, and you will get feedback on your models along the way from our automatic evaluation system."
+          presenters:
+            - Guido Tack
+    - time: "13:00-14:00"
+      events:
+        - name: Lunch
+          description: "Lunch served on-site at the Watermark Restaurant."
+    - time: "14:00-15:30"
+      events:
+        - name: "Deep dive: MiniZinc for scheduling, packing, and routing"
+          elevated: true
+          description: "Expanding on the morning session, we will look at more advanced modelling techniques, focusing on real-world problems and solution methods."
+          presenters:
+            - Guido Tack
+    - time: "15:30-15:45"
+      events:
+        - name: "Afternoon tea"
+          description: "Afternoon tea served on-site."
+    - time: "16:00-18:00"
+      events:
+        - name: "Hands-on MiniZinc lab"
+          elevated: true
+          description: "Similar to the first modelling practice session, you will use your new knowledge and skills to work in a small team on modelling and solving a realistic optimisation problem with MiniZinc."
+          presenters:
+            - Guido Tack
+    - time: "19:30-21:30"
+      events:
+        - name: 🍝 Banquet dinner and social events
+          description: "Enjoy a hearty meal and interact with peers at the Churchill/Flinders Room."
+    - time: "Evening"
+      events:
+        - name: "Modelling competition"
+          elevated: true
+          description: "We will give you a set of challenging problems to model and solve. Work in a team and track your progress on the live leaderboard!"
 
-- date: '2024-11-05'
+- date: "2024-11-05"
   events:
-  - time: All day
-    events:
-    # - image: https://images.unsplash.com/photo-1705453168890-6c244eb82942?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    - image: /assets/robot.png
-      name: "Learning under uncertainty"
-      presenters:
-      - Hanna Kurniawati
-      description: "Explore reinforcement learning and task-motion planning under uncertainty."
-      elevated: true
-    # - image: https://images.unsplash.com/photo-1658661811609-7c53af4c28ee?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    #   name: "Option 2: Pacman Planning Challenge"
-    #   presenters:
-    #   - Sebastian
-    #   - Nir
-    #   description: "Guide Pacman through a series of planning puzzles – strategic thinking required!"
-    #   elevated: true
-    # - image: https://images.unsplash.com/photo-1691613910005-da9010169a50?q=80&w=2549&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    #   name: "Option 3: Angry Birds KR Challenge"
-    #   presenters:
-    #   - Jochen Renz
-    #   description: "Tackle knowledge representation challenges with an Angry Birds twist."
-    #   elevated: true
-  - time: '19:00'
-    events:
-    - name: 🍝 Dinner and social events
-      description: "Dinner served on-site."
-  - time: Evening
-    events:
-    - name: "Competition/hackathon"
-      elevated: true
-      description: "Test your understanding and work on a challenge problem related to learning under uncertainty."
-- date: '2024-11-06'
+    - time: "07:30-08:20"
+      events:
+        - name: Breakfast
+          description: "Breakfast served on-site at the Watermark Restaurant."
+    - time: "09:00-10:30"
+      events:
+        - image: /assets/robot.png
+          name: "Introduction to Robot Planning and Planning under Uncertainty"
+          presenters:
+            - Hanna Kurniawati
+          description: >-
+            This session will discuss the basics of Robot Motion Planning, followed by 
+            planning in continuous and hybrid (continuous-discrete) domain. Next, we will introduce uncertainty in robotics and three related sequential decision making 
+            under uncertainty frameworks: Markov Decision Processes (MDPs), Partially Observed Markov Decision Processes (POMDPs), and 
+            Reinforcement Learning (RL).
+          elevated: true
+    - time: "10:30-11:00"
+      events:
+        - name: "🫖 Morning tea"
+          description: "Morning tea served on-site at the Foyer."
+    - time: "11:00-13:00"
+      events:
+        - name: Hands-on exercise
+          description: Work in groups to identify suitable framing and modelling of several robotics scenarios.
+          presenters:
+            - Hanna Kurniawati
+          elevated: true
+    - time: "13:00-14:00"
+      events:
+        - name: Lunch
+          description: "Lunch served on-site at the Watermark Restaurant."
+    - time: "14:00-15:30"
+      events:
+        - name: Further Planning under Uncertainty
+          description: We'll discuss more on scalability issues in generating policies for MDPs, POMDPs, and RL, and existing methods that alleviate some of the issues. We will discuss sampling-based off-line and on-line solvers for MDP and POMDP, as well as several basic RL techniques.
+          presenters:
+            - Hanna Kurniawati
+          elevated: true
+    - time: "15:30-15:45"
+      events:
+        - name: "Afternoon tea"
+          description: "Afternoon tea served on-site."
+    - time: "16:00-18:00"
+      events:
+        - name: Hands-on exercise
+          description: Writing on-line solvers for MDP and POMDP.
+          presenters:
+            - Hanna Kurniawati
+          elevated: true
+    - time: Evening
+      events:
+        - name: "🎬 Movie night and code challenge"
+          description: "Watch a movie together at the Churchill/Flinders Room. Work on a challenge problem that ties up your knowledge from the day."
+          elevated: true
+- date: "2024-11-06"
   events:
-  - time: '9:00-11:00'
-    events: 
-    - name: Introduction to Multi-Agent Path Finding
-      image: https://www.leagueofrobotrunners.org/2024-banner-mapf.jpg
-      presenters:
-      - Daniel Harabor
-      description: |-
-        An introduction to Multi-Agent Path Finding (MAPF) problems, where multiple agents must navigate a shared environment without colliding. 
-        
-        Topics to be covered: 
-        1. Overview, motivation, and applications of MAPF
-        2. Coordinating teams of agents using heuristic search
-        3. Simple models: joint space model and heuristic search
-        4. Optimal MAPF and CBS
-        5. Operator decomposition to manage branching factor
-        6. Independence detection
-      elevated: true
-  - time: '11:00-13:00'
-    events:
-    - name: "Guided session"
-      elevated: true
-      description: Hands-on experimentation with the League of Robot Runners starter kit.
-      presenters:
-      - Daniel Harabor
-  - time: '14:00-15:30'
-    events:
-    - name: >- 
-        Presentation: "Closing the gap between theory and implementation"
-      image: https://i.ytimg.com/vi/7MOQOvGJyn4/hq720.jpg
-      presenters:
-      - Daniel Harabor
-      elevated: true
-      description: |-
-        This session bridges theoretical concepts and practical implementations in MAPF. We will explore various MAPF variants, including suboptimal MAPF and lifelong MAPF, while addressing real-time constraints and practical considerations.
-        
-        Discussion points:
-        - Bridging theoretical concepts and practical implementations
-        - MAPF variants: suboptimal MAPF, lifelong MAPF
-        - Real-time constraints and practical considerations
-        - Suboptimal approaches: Large Neighborhood Search, PIBT, policy-driven planning, and learning
-  - time: '16:00-18:00'
-    events:
-    - name: "Hands-on lab and League of Robot Runners competition"
-      presenters:
-      - Daniel Harabor
-      - Mor Vered
-      description: "Tackle the core combinatorial challenges found in cooperative multi-robot coordination problems: robot dynamics, lifelong planning, task assignment and real-time execution. We explore these topics using the tools of heuristic-driven state-space search."
-      elevated: true
-  - time: '19:00'
-    events:
-    - name: 🍝 Dinner and social events
-      description: "Dinner served on-site."
-- date: '2024-11-07'
+    - time: "07:30-08:20"
+      events:
+        - name: Breakfast
+          description: "Breakfast served on-site at the Watermark Restaurant."
+    - time: "9:00-11:00"
+      events:
+        - name: Introduction to Pathfinding and Heuristic Search
+          image: https://i.ytimg.com/vi/7MOQOvGJyn4/hq720.jpg
+          presenters:
+            - Daniel Harabor
+          description: >-
+            An introduction to decision-making problems, Pathfinding and Heuristic Search.
+          elevated: true
+    - time: "11:00-12:30"
+      events:
+        - name: "Hands-on lab"
+          elevated: true
+          description: Hands-on experimentation with A* and its variants in the context of the Robot Runners Framework.
+          presenters:
+            - Daniel Harabor
+    - time: "13:00-14:00"
+      events:
+        - name: Lunch
+          description: "Lunch served on-site at the Watermark Restaurant."
+    - time: "14:00-15:30"
+      events:
+        - name: >-
+            Introduction to Multi-Agent Pathfinding
+          image: https://www.leagueofrobotrunners.org/2024-banner-mapf.jpg
+          presenters:
+            - Daniel Harabor
+          elevated: true
+          description: >-
+            Introduction to Multi-Agent Pathfinding (MAPF) problems, where multiple agents must navigate a shared environment without colliding.
+    - time: "16:00-18:00"
+      events:
+        - name: "Hands-on lab"
+          presenters:
+            - Daniel Harabor
+            - Mor Vered
+          description: Hands-on experimentation with landmark MAPF techniques in the context of the Robot Runners Framework, including Prioritised Planning and Large-Neighbourhood Search.
+          elevated: true
+    - time: "19:30"
+      events:
+        - name: 🍕 Pizza and hackathon
+          description: "Have a pizza and participate in the a minature version of the League of Robot Runners competition."
+          elevated: true
+- date: "2024-11-07"
   events:
-  - time: '10:00-14:00'
-    events:
-    - name: "🎗️ Closing session & awards"
-      elevated: true
-      description: "Celebrate the week’s achievements. Final presentations and awards for the competition. Hear from the winning teams about their approaches."
-  - time: '14:00'
-    events:
-    - name: Departure
-      description: "Return bus to Southern Cross Station."
-
+    - time: "07:30-08:20"
+      events:
+        - name: Breakfast
+          description: "Breakfast served on-site at the Watermark Restaurant."
+    - time: "10:30-11:00"
+      events:
+        - name: "🫖 Morning tea"
+          description: "Morning tea served on-site at the Foyer."
+    - time: "11:00-13:00"
+      events:
+        - name: "🎗️ Closing session & awards"
+          elevated: true
+          description: "Celebrate the week’s achievements. Final presentations and awards for the competition. Hear from the winning teams about their approaches."
+    - time: "13:00-14:00"
+      events:
+        - name: Lunch
+          description: "Lunch served on-site at the Watermark Restaurant."
+    - time: "14:00"
+      events:
+        - name: Departure
+          description: "Return bus to Southern Cross Station."
+          elevated: true
